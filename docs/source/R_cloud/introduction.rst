@@ -88,7 +88,7 @@ Installing packages to your workspace is analogous to installing apps on your ph
 
 In the ``console``, please insert the following lines of code to install the required packages:
 
-... code-block:: R
+.. code-block:: R
 
     install.packages("ggplot2")
     install.packages("pheatmap")
