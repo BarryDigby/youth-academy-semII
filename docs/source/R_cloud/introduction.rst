@@ -38,12 +38,14 @@ Select a free acount. This will provide us with enough resources for the worksho
 
 Enter a valid email address and fill out the rest of the information (password, name). ``R Studio Cloud`` will send you an email with a link to verify your email address. Click on the link to verify your email address - you should now be able to log into ``R Studio Cloud``.
 
-Select ``R Studio Cloud``from the options listed below:
+Select ``R Studio Cloud`` from the options listed below:
 
 .. figure:: /_static/images/r_cloud_3.png
    :figwidth: 700px
    :target: /_static/images/r_cloud_3.png
    :align: center
+
+|
 
 Create Project
 ==============
@@ -56,6 +58,8 @@ Select New Project > New R Studio Project.
    :figwidth: 700px
    :target: /_static/images/r_cloud_4.png
    :align: center
+
+|
 
 R Markdown
 ==========
