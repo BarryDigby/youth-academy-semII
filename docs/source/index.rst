@@ -1,22 +1,4 @@
-Welcome to Lumache's documentation!
-===================================
+Genomics Data Science Workshop
+==============================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-
-.. note::
-
-   This project is under active development.
-
-Contents
---------
-
-.. toctree::
-
-   usage
-   api
+This website contains all of the necessary materials to run a 2 day workshop for secondary school students in Ireland. There are no academic prerequisites to this workshop, however it may serve most useful for transition year students by providing hands on experience in the interdisciplinary field of genomics data science, helping inform leaving cert subject choices. 
