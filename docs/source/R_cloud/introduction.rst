@@ -7,11 +7,13 @@ Fortunately, we have a cloud-based version of R available to us at the following
 
 Please follow the steps below to:
 
-1. Create an account
+1. :ref:`Create Account`
 
-2. Create a project
+2. :ref:`Create Project`
 
-3. Install some packages
+3. :ref:`R Markdown`
+
+4. :ref:`Install Packages`
 
 Create Account
 ==============
