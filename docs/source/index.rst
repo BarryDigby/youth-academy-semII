@@ -1,14 +1,17 @@
 Genomics Data Science Workshop
 ==============================
 
-This website contains all of the necessary materials to run a 2 day workshop for secondary school students in Ireland. There are no academic prerequisites to this workshop, however, it may help inform leaving cert subject choices for transition year students by providing hands on experience in the interdisciplinary field of genomics data science encompassing biology, computer science and mathematics.
+This website contains all of the necessary materials to run a 2 day workshop for secondary school students on RNA-Sequencing.
 
 The course is divided into 4 2hr blocks:
 
-      1. Introduction to Genomics
-      2. Introduction to coding in R
+      1. RNA-Seq Introduction
+      2. Coding in RStudio
       3. Machine Learning Part I
       4. Machine Learning Part II
+
+There are no academic prerequisites to this workshop, however, it may help inform leaving cert subject choices for transition year students by providing hands on experience in the interdisciplinary field of genomics data science encompassing biology, computer science and mathematics.
+
 
 .. toctree::
    :maxdepth: 2
@@ -16,3 +19,10 @@ The course is divided into 4 2hr blocks:
    :caption: R Studio Cloud
 
    /R/Cloud/introduction
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Coding in RStudio
+
+   /R/Coding/coding
