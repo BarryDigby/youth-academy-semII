@@ -88,7 +88,10 @@ Below we will create two vectors:
     racing_number <- c(33, 44, 11, 4 , 3)
     driver_names <- c("Verstappen", "Hamilton", "Perez", "Norris", "Riccardo")
 
-We can use the ``driver_names`` variable to assign names to the ``racing_number`` vector using the ``names()`` function. Store the ``racing_number`` variable as ``drivers`` to avoid confusion!
+Named Vectors
+-------------
+
+We can use the ``driver_names`` vector variable to assign names to the ``racing_number`` vector using the ``names()`` function. Store the ``racing_number`` variable as ``drivers`` to avoid confusion!
 
 .. code-block:: r
 
@@ -125,9 +128,9 @@ In the example below, we will access the first, last and 2nd to 4th drivers in o
 
 .. code-block:: r
 
-    print(drivers[1])
-    print(drivers[7])
-    print(drivers[2:4])
+    drivers[1]
+    drivers[7]
+    drivers[2:4]
 
 .. code-block:: R
 
@@ -194,3 +197,125 @@ These all achieve the same result. If you want to find out who the number 2 driv
 
     "Nikita Mazepin"
 
+Dataframes
+==========
+
+Dataframes are a superior method to lists for storing multiple vectors. Typically, each row in a dataframe corresponds to an observation (person, event, sample), whilst columns correspond to the variable being recorded (e.g height, age, eye color).
+
+.. figure:: /_static/images/tidy-1.png
+   :figwidth: 700px
+   :target: /_static/images/tidy-1.png
+   :align: center
+
+|
+
+Go to RStudio Cloud and open your session. Load in the ``Iris`` dataset:
+
+.. code-block:: R
+
+    iris <- datasets::iris
+
+You can see a newly created 'Data' object in your environment called ``iris`` with ``150 obs of 5 variables``. That is to say we have 150 rows and 5 columns. 
+
+Colnames & Rownames
+-------------------
+
+A simple rule applies to ``colnames`` and ``rownames``: **they must be unique**. This is because R uses both ``colnames`` and ``rownames`` to index each column and row respectively, duplicate entries are not allowed. 
+
+Inspect the column names and row names of a dataframe:
+
+.. code-block:: r
+
+    colnames(iris)
+    rownames(iris)
+
+.. code-block:: console
+
+      [1] "Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Width"  "Species"     
+
+      [1] "1"   "2"   "3"   "4"   "5"   "6"   "7"   "8"   "9"   "10"  "11"  "12"  "13"  "14"  "15"  "16"  "17"  "18"  "19" 
+     [20] "20"  "21"  "22"  "23"  "24"  "25"  "26"  "27"  "28"  "29"  "30"  "31"  "32"  "33"  "34"  "35"  "36"  "37"  "38" 
+     [39] "39"  "40"  "41"  "42"  "43"  "44"  "45"  "46"  "47"  "48"  "49"  "50"  "51"  "52"  "53"  "54"  "55"  "56"  "57" 
+     [58] "58"  "59"  "60"  "61"  "62"  "63"  "64"  "65"  "66"  "67"  "68"  "69"  "70"  "71"  "72"  "73"  "74"  "75"  "76" 
+     [77] "77"  "78"  "79"  "80"  "81"  "82"  "83"  "84"  "85"  "86"  "87"  "88"  "89"  "90"  "91"  "92"  "93"  "94"  "95" 
+     [96] "96"  "97"  "98"  "99"  "100" "101" "102" "103" "104" "105" "106" "107" "108" "109" "110" "111" "112" "113" "114"
+    [115] "115" "116" "117" "118" "119" "120" "121" "122" "123" "124" "125" "126" "127" "128" "129" "130" "131" "132" "133"
+    [134] "134" "135" "136" "137" "138" "139" "140" "141" "142" "143" "144" "145" "146" "147" "148" "149" "150"
+
+Note that the rownames in this dataset are not important, they are just automatically incremented integers.
+
+Dataframe Indexes
+-----------------
+
+There are situations where we will need to isolate columns or rows for an analysis. The same numerical indexing logic from vectors applies, but there are **two entries to the square brackets** - one for rows, and one for columns. 
+
+.. figure:: /_static/images/slicingDataFrames.png
+   :figwidth: 700px
+   :target: /_static/images/slicingDataFrames.png
+   :align: center
+
+|
+
+Like lists, we can provide human readable names to access a specific column: ``iris$Sepal.Width``.
+
+Subsetting Dataframes
+---------------------
+
+Now that we know how to isolate specific cells of a dataframe, the next step is to apply these changes by 'slicing the dataframe'. Slicing a subsetting are interchangeable - I will nearly always call it subsetting. 
+
+In our ``Iris`` dataset, make a new dataframe that contains only numerical measurements for ``Petals``:
+
+.. code-block:: R
+
+    petal_data <- iris[, 3:4]
+
+Now make a dataframe that contains only the numerical observations (i.e drop the column ``species``):
+
+.. code-block:: r
+
+    numerical_data <- iris[,-5]
+    
+Personally, I prefer the use of the ``subset()`` function. The above operations are performed using ``subset`` below:
+
+.. code-block:: R
+
+    petal_data <- subset(iris, select = c(Petal.Width, Petal.Length))
+    numerical_data <- subset(iris, select = -c(Species))
+
+.. note::
+
+    It is rare that you would select/drop observations from a dataset in this manner (do not cherry pick your data). This is why the examples are all done on columns.
+
+Filtering Dataframes
+--------------------
+
+Filtering dataframes is an extension of dataframe subsetting, performed using ``logical operators``:
+
+* ``<``: less than
+* ``<=``: less than or equal to
+* ``>``: greater than
+* ``>=``: greater than or equal to
+* ``==``: exactly equal to
+* ``!=``: not equal to
+* ``!x``: Not x
+* ``x | y``: x OR y
+* ``x & y``: x AND y
+
+Using the ``Iris`` dataset as an example, to subset the original dataframe to isolate data that belongs to the species ``Setosa``:
+
+.. code-block:: R
+
+    setosa_data <- subset(iris, iris$Species == "Setosa")
+
+Updating Dataframes
+-------------------
+
+To create a new variable in our dataframe, we can use the ``$`` operator. 
+
+In the example below, we will subtract ``Petal.Length`` from ``Sepal.Length`` and store it as a new column. 
+
+.. code-block:: R
+
+    iris$sepal_less_petal_len <- iris$Sepal.Length - iris$Petal.Length
+
+Bear in mind that all we are doing here is performing a mathematical operation on two vectors.
