@@ -26,3 +26,24 @@ There are no academic prerequisites to this workshop, however, it may help infor
    :caption: Coding in RStudio
 
    /R/Coding/coding
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Visualising Variables
+
+   /R/Plots/visualising_variables
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Machine Learning: Clustering
+
+   /Machine_Learning/Clustering/clustering
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Machine Learning: Classification
+
+   /Machine_Learning/Classification/classification

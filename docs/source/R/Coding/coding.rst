@@ -301,7 +301,7 @@ Filtering dataframes is an extension of dataframe subsetting, performed using ``
 * ``x | y``: x OR y
 * ``x & y``: x AND y
 
-Using the ``Iris`` dataset as an example, to subset the original dataframe to isolate data that belongs to the species ``Setosa``:
+Using the ``Iris`` dataset as an example, subset the original dataframe to isolate data that belongs to the species ``Setosa``:
 
 .. code-block:: R
 
