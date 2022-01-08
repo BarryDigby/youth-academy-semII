@@ -318,4 +318,33 @@ In the example below, we will subtract ``Petal.Length`` from ``Sepal.Length`` an
 
     iris$sepal_less_petal_len <- iris$Sepal.Length - iris$Petal.Length
 
-Bear in mind that all we are doing here is performing a mathematical operation on two vectors.
+IfElse
+------
+
+We can use ``ifelse()`` to create new variables based on conditional statements. 
+
+In the example below we will use a vector, however this applied to dataframe columns too:
+
+.. code-block:: R
+
+    vector <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+    test <- ifelse(vector > 5, "greater than 5", "less than 5")
+    print(test)
+
+.. code-block:: console
+
+    [1] "less than 5"    "less than 5"    "less than 5"    "less than 5"    "less than 5"    "greater than 5" "greater than 5" "greater than 5" "greater than 5" "greater than 5"
+
+But what about the 5th element? 5 is not less than 5. 
+
+To add a second layer of conditionals we will re-use the ``ifelse()`` function:
+
+.. code-block:: R
+
+    test <- ifelse(vector == 5, "five", test)
+    print(test)
+
+.. code-block:: console
+
+    [1] "less than 5"    "less than 5"    "less than 5"    "less than 5"    "five"           "greater than 5" "greater than 5" "greater than 5" "greater than 5" "greater than 5"
