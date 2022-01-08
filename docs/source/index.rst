@@ -12,6 +12,12 @@ The course is divided into 4 2hr blocks:
 
 There are no academic prerequisites to this workshop, however, it may help inform leaving cert subject choices for transition year students by providing hands on experience in the interdisciplinary field of genomics data science encompassing biology, computer science and mathematics.
 
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Genomics
+
+   /Genomics/introduction
 
 .. toctree::
    :maxdepth: 2

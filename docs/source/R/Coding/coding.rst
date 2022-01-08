@@ -323,7 +323,11 @@ IfElse
 
 We can use ``ifelse()`` to create new variables based on conditional statements. 
 
-In the example below we will use a vector, however this applied to dataframe columns too:
+In the example below we will use a vector, however this applies to dataframe columns too:
+
+.. note::
+
+    The ``ifelse()`` function is an example of a ternary operator which reads as follows: `` A ? B : C`` - If ``A`` is true choose ``B``, else choose ``C``.
 
 .. code-block:: R
 
