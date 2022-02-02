@@ -352,3 +352,9 @@ To add a second layer of conditionals we will re-use the ``ifelse()`` function:
 .. code-block:: console
 
     [1] "less than 5"    "less than 5"    "less than 5"    "less than 5"    "five"           "greater than 5" "greater than 5" "greater than 5" "greater than 5" "greater than 5"
+
+
+Worksheet
+---------
+
+Go to the following link to 

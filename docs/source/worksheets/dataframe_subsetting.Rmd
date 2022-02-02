@@ -1,0 +1,112 @@
+---
+title: "Dataframe Subsetting"
+author: "Barry"
+date: "2/2/2022"
+output: html_document
+---
+
+For this exercise you will work with a Stroke Dataset, which has work, maritial status and some clinical variables recorded such as glucose levels, bmi etc. The variable stroke indicates if the patient has had a stroke. 
+
+If you are twinkly eyes, you might use these kinds of datasets for finding patterns that help identify fututre strokes in new patients before they happen. 
+
+If you are working in health insurance, you might charge a higher rate for a customer whose characteristics match those who had a stroke. 
+
+Load the dataset in the code block below to get started (please take the time to view the dataframe first).
+
+Raise you hand at any stage to ask for help :) 
+
+```{R}
+stroke <- data.frame(read.delim("https://raw.githubusercontent.com/BarryDigby/Youth-Academy/master/data/stroke-data.csv", sep=",", header=T))
+```
+
+
+## Question 1
+How many patients are there in the dataset? 
+
+Save your answer as a variable called n_patients and uncomment the second line (remove the #) to print your answer fully.
+
+```{R}
+n_patients <- 
+  
+#paste("There are", n_patients, "in the stroke dataset.")
+```
+
+## Question 2 
+How many patients have had a stroke? 
+
+Save your answer in a variable called n_stroke. Uncomment the paste command when you are done to print your answer.
+
+Hint: use the table() function on the 'stroke' column. The table() function will count how many Yes/No answers there are for you.
+
+```{R}
+n_stroke <- 
+  
+#paste(n_stroke[2], "patients have had a stroke in the dataset,", n_stroke[1], "have not had a stroke.")
+```
+
+## Task 1
+The column "id" is a unique identifier for each patient in the dataset.
+
+Make the unique "id" column our datasets row names using the rownames() function:
+
+```{R}
+rownames(__________) <- _______$________
+```
+
+
+## Task 2
+Inspect the dataframe to make sure the rownames match the "id" column.
+
+Now that our "id" column exists as row names, you can delete the colum. 
+
+Using any method (subset or numerical indexing) drop the column "id" from the dataset:
+
+```{R}
+
+```
+
+Your dataset should now have 11 columns.
+
+## Task 3
+Your boss wants to split the dataset according to gender. 
+
+Subset the dataset using the 'gender' column so that two new dataframes called male_stroke and female_stroke are created:
+
+Note: The gender vector is an atomic vector (do not worry about what this means) - all you need to know is that the example given in the website will not work - when using subset, pass the column name as the second argument. (do not pass both the dataset name and column name separated by a dollar symbol).
+
+```{R}
+male_stroke <- 
+  
+female_stroke <- 
+```
+
+
+## Question 3
+
+How many patients are in the male_stroke and female_stroke datasets? Save the answer to n_females and n_males variables and uncomment the code to print your answer when you are finished.
+
+```{R}
+n_females <- nrow(female_stroke)
+
+n_males <- nrow(male_stroke)
+
+#paste("There are", n_females,"females in the dataset and",n_males,"males in the dataset.")
+```
+
+## Question 4
+
+Finally, we want to use a metric to convey the rate of strokes in each gender. We will use something simple: stroke rate = (the number of strokes/the number of patients) for both males and females. 
+
+In the code block below, calculate the number of strokes for both males and females. We will then use n_female and n_male from the previous code block to use as the denominator in our simple metric (You can uncomment the code lines once you have n_stroke_male and n_stroke_female)
+
+```{R}
+n_stroke_female <-
+  
+n_stroke_male <-
+  
+stroke_rate_females <- (n_stroke_female/n_females)
+  
+stroke_rate_males <- (n_stroke_male/n_males)
+  
+paste("The rate of strokes in females is", stroke_rate_females, "and", stroke_rate_males, "in males.")
+```
