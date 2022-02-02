@@ -10,7 +10,7 @@ Visualising Distributions
 
 There are two common methods to visualise the distribution of a single variable: using ``boxplots`` or ``histograms`` - both portray the same information.
 
-To make the plot, simply pass the variable (column) or interest to the ``hist()`` or ``boxplot()`` function:
+To make the plot, simply pass the variable (column) of interest to the ``hist()`` or ``boxplot()`` function:
 
 .. code-block:: R
 

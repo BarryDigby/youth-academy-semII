@@ -5,9 +5,9 @@ date: "2/2/2022"
 output: html_document
 ---
 
-For this exercise you will work with a Stroke Dataset, which has work, maritial status and some clinical variables recorded such as glucose levels, bmi etc. The variable stroke indicates if the patient has had a stroke. 
+For this exercise you will work with a Stroke Dataset, which has work, marital status and some clinical variables recorded such as glucose levels, bmi etc. The variable stroke indicates if the patient has had a stroke. 
 
-If you are twinkly eyes, you might use these kinds of datasets for finding patterns that help identify fututre strokes in new patients before they happen. 
+If you are twinkly eyes, you might use these kinds of datasets for finding patterns that help identify future strokes in new patients before they happen. 
 
 If you are working in health insurance, you might charge a higher rate for a customer whose characteristics match those who had a stroke. 
 
@@ -104,9 +104,9 @@ n_stroke_female <-
   
 n_stroke_male <-
   
-stroke_rate_females <- (n_stroke_female/n_females)
+#stroke_rate_females <- (n_stroke_female/n_females)
   
-stroke_rate_males <- (n_stroke_male/n_males)
+#stroke_rate_males <- (n_stroke_male/n_males)
   
-paste("The rate of strokes in females is", stroke_rate_females, "and", stroke_rate_males, "in males.")
+#paste("The rate of strokes in females is", stroke_rate_females, "and", stroke_rate_males, "in males.")
 ```
