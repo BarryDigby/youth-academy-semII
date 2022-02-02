@@ -50,9 +50,11 @@ Transcription Produces Genetic Messages
 
 Transcription begins when the double stranded DNA is unwound and one strand is used as a template for making pre-mRNA. It involves several steps:
 
-``Initiation`` : The enzyme RNA polymerase binds to a specific location in DNA called a promoter region - telling the enzyme “this is where the gene starts”.
-``Elongation`` : RNA polymerase reads the nucleotide sequence of the template DNA strand. As it moves along, it inserts and links together complementary RNA nucleotides to form a pre-mRNA molecule.
-``Termination`` : The RNA polymerase breaks the link between the template DNA strand and the pre-mRNA molecule, releasing the pre-mRNA. The DNA reforms it’s double helix.
+#. ``Initiation`` : The enzyme RNA polymerase binds to a specific location in DNA called a promoter region - telling the enzyme “this is where the gene starts”.
+
+#. ``Elongation`` : RNA polymerase reads the nucleotide sequence of the template DNA strand. As it moves along, it inserts and links together complementary RNA nucleotides to form a pre-mRNA molecule.
+
+#. ``Termination`` : The RNA polymerase breaks the link between the template DNA strand and the pre-mRNA molecule, releasing the pre-mRNA. The DNA reforms it’s double helix.
 
 .. figure:: /_static/images/transcription.png
    :figwidth: 700px
@@ -81,14 +83,18 @@ Messenger RNA Translation
 .. note:: 
    Some definitions are required before describing translation:
 
-   **Ribosomes**: A complex (made of ribosomal RNA units) that aid in the production of proteins.
-   **transfer RNA (tRNA)**: A small RNA unit that contains a specific binding site for each amino acid. The binding site is determined by the anticodon.
-   **anticodon**: 3 nucleotide molecules that bind in complimentary fashion to the mRNA codons (3 bases).
+   #. **Ribosomes**: A complex (made of ribosomal RNA units) that aid in the production of proteins.
+   
+   #. **transfer RNA (tRNA)**: A small RNA unit that contains a specific binding site for each amino acid. The binding site is determined by the anticodon.
+   
+   #. **anticodon**: 3 nucleotide molecules that bind in complimentary fashion to the mRNA codons (3 bases).
    Translation, like transcription, has three steps: initiation, elongation, and termination:
 
-``Initiation`` : The tRNA carrying the amino acid methionine (and the complimentary anticodon to AUG) binds to the mRNA. AUG signals the start site of protiens, and is the first amino acid in all proteins (the figure below does not show the start of the polypeptide..)
-``Elongation`` : As new tRNA molecules are recruited to the ribosome, the amino acids form a peptide bond, forming a chain of amino acids (i.e a poly peptide chain).
-``Termination`` : Termination occurs when the ribosome reaches a stop codon. The mature peptide is relased, and folded into a 3-D structure.
+#. ``Initiation`` : The tRNA carrying the amino acid methionine (and the complimentary anticodon to AUG) binds to the mRNA. AUG signals the start site of protiens, and is the first amino acid in all proteins (the figure below does not show the start of the polypeptide..)
+
+#. ``Elongation`` : As new tRNA molecules are recruited to the ribosome, the amino acids form a peptide bond, forming a chain of amino acids (i.e a poly peptide chain).
+
+#. ``Termination`` : Termination occurs when the ribosome reaches a stop codon. The mature peptide is relased, and folded into a 3-D structure.
 
 .. figure:: /_static/images/translation_med.jpeg
    :figwidth: 700px
