@@ -357,4 +357,4 @@ To add a second layer of conditionals we will re-use the ``ifelse()`` function:
 Worksheet
 ---------
 
-Go to the following link to 
+Go to the following `link <https://github.com/BarryDigby/TY_workshop/blob/master/docs/source/worksheets/dataframe_subsetting.Rmd>`_ and copy the contents of the file. Paste them into your RStudio Cloud workspace.
