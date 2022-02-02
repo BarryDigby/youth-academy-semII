@@ -135,3 +135,8 @@ Adding colors to plots make groups instantly stand out. To do this in ``ggpubr``
    :align: center
 
 |
+
+Worksheet
+=========
+
+Copy and paste the contents of the following `R Markdown document <https://github.com/BarryDigby/TY_workshop/blob/master/docs/source/worksheets/boxplots.Rmd>`_ into your RStudio Cloud workspace and work through the questions.
