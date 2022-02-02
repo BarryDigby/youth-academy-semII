@@ -4,7 +4,7 @@ Introduction
 DNA is the genetic material of all organisms on Earth. When DNA is transmitted from parents to children, it can determine some of the children's characteristics (such as their eye color or hair color). How does the sequence in our DNA (A, T, G, C) actually affect humans or organisms features?
 
 Genes Specify Proteins
-----------------------
+######################
 
 Within the vast stretches of DNA in our genome are biologically functional stretches of DNA called genes. 
 
@@ -46,7 +46,7 @@ How does a sequence of DNA nucleotides produce a protein? The figure below shows
 The process of activating a gene to produce a fucntional protein is known as **gene expression**.
 
 Transcription Produces Genetic Messages
----------------------------------------
+#######################################
 
 Transcription begins when the double stranded DNA is unwound and one strand is used as a template for making pre-mRNA. It involves several steps:
 
@@ -62,7 +62,7 @@ Transcription begins when the double stranded DNA is unwound and one strand is u
 |
 
 Messenger RNA Processing
-------------------------
+########################
 
 pre-mRNAs are processed in the nucleus to remove introns (nucleotide sequences present in genes that are not translated into the amino acid sequence of a protein). Introns occur between exons, the nucleotide sequences that remain in the mRNA and are translated into the amino acid sequence of a protein.
 
@@ -76,7 +76,7 @@ As introns are removed, the exons are spliced together to form mature mRNA molec
 |
 
 Messenger RNA Translation
--------------------------
+#########################
 
 .. note:: 
    Some definitions are required before describing translation:
@@ -118,7 +118,7 @@ RNA-Seq is divided into three steps:
 3. Data Analysis (that's us!).
 
 Library Preparation
--------------------
+###################
 
 Library preparation involves capturing the RNA in cells and preparing the sample for sequencing. It can be divided into 6 steps:
 
@@ -142,7 +142,7 @@ Library preparation involves capturing the RNA in cells and preparing the sample
 |
 
 Sequencing
-----------
+##########
 
 The samples containing the captured RNA are then sent to a laboratory where sequencing is performed. Below is a broad schematic of how sequencing works:
 
@@ -156,7 +156,7 @@ The samples containing the captured RNA are then sent to a laboratory where sequ
 The output from the sequencing machine is a file containing all of the sequenced reads and additional information regarding how confident the machine was about each base call.
 
 FASTQ Files
------------
+###########
 
 FASTQ files are used to store the output from sequencing machines. See below for the first 4 sequences stored in a FASTQ file:
 
@@ -195,7 +195,7 @@ FASTQ files are used to store the output from sequencing machines. See below for
 |
 
 Genome Alignment
-----------------
+################
 
 The next task is to align our reads back to the genome. This is done usig alignment algorithms but is essentially like piecing a puzzle back together! 
 
@@ -207,7 +207,7 @@ The next task is to align our reads back to the genome. This is done usig alignm
 |
 
 Viewing Alignments
-------------------
+##################
 
 Once more, this is difficult to conceptualise so let's get some hands on experience with a file containing aligned reads. 
 
@@ -222,8 +222,3 @@ Once more, this is difficult to conceptualise so let's get some hands on experie
 5. In the dropdown menu, select 'Tracks' > 'Local File'
 
 6. Upload the two files you downloaded, they are probably under downloads. 
-
-Data Analysis
--------------
-
-Examples of data analysis that can be performed on RNA-Seq data will be provided in worksheets throughout the workshop. 
