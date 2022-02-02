@@ -222,3 +222,5 @@ Once more, this is difficult to conceptualise so let's get some hands on experie
 5. In IGV, in the dropdown menu, select ``Tracks`` > ``Local File``
 
 6. Add the two ``RAP1`` files you downloaded, they are probably under downloads.
+
+7. Note to teacher: ``SNC1`` gene is an example of intron splicing.
