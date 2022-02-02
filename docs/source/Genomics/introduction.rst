@@ -213,12 +213,12 @@ Once more, this is difficult to conceptualise so let's get some hands on experie
 
 1. Navigate to https://igv.org/app/
 
-2. In the dropdown menu, select 'Genome', > 'sacCer3'
+2. In the dropdown menu, select ``Genome``, > ``sacCer3``.
 
-3. Navigate to the following web page: https://github.com/BarryDigby/Youth-Academy/tree/master/data.
+3. Navigate to the following web page: `https://github.com/BarryDigby/Youth-Academy/tree/master/data<https://github.com/BarryDigby/Youth-Academy/tree/master/data>`_.
 
 4. Download the files ``RAP1_UNINDUCED_REP1.markdup.sorted.bam`` and ``RAP1_UNINDUCED_REP1.markdup.sorted.bam.bai``.
 
-5. In the dropdown menu, select 'Tracks' > 'Local File'
+5. In IGV, in the dropdown menu, select ``Tracks`` > ``Local File``
 
-6. Upload the two files you downloaded, they are probably under downloads. 
+6. Add the two ``RAP1`` files you downloaded, they are probably under downloads.
