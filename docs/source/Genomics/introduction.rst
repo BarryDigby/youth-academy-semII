@@ -88,7 +88,8 @@ Messenger RNA Translation
    #. **transfer RNA (tRNA)**: A small RNA unit that contains a specific binding site for each amino acid. The binding site is determined by the anticodon.
    
    #. **anticodon**: 3 nucleotide molecules that bind in complimentary fashion to the mRNA codons (3 bases).
-   Translation, like transcription, has three steps: initiation, elongation, and termination:
+   
+Translation, like transcription, has three steps: initiation, elongation, and termination:
 
 #. ``Initiation`` : The tRNA carrying the amino acid methionine (and the complimentary anticodon to AUG) binds to the mRNA. AUG signals the start site of protiens, and is the first amino acid in all proteins (the figure below does not show the start of the polypeptide..)
 
