@@ -10,20 +10,22 @@ Within the vast stretches of DNA in our genome are biologically functional stret
 
 Each gene provides instructions for a functional product, that is, a molecule needed to perform a job in the cell. In many cases, the functional product of a gene is a protein.
 
-This can be hard to conceptualise. Follow the instructions below to load the human genome in a web browser so you can see how genes are interspersed amongst the genome:
+Visualising the human genome
+#############################
 
-View the human genome
-#####################
+To help you visualise these functional regions of the human genome, we will use an application called the Integrative Genomics Viewer (IGV) which is a high-performance, easy-to-use, interactive tool for the visual exploration of genomic data. Once we have selected the genome to view, an annotation track is automatically loaded in the browser (you may have to zoom in to view it).
 
-1. Navigate to the website https://igv.org/app/ in a new tab.
+The annotation track marks the start and end coordinates of (known) genes in our DNA. The vast majority of functional products listed in the annotation tracks are proteins, which is the main job of genes – to produce proteins. Such genes are known as protein-coding genes.
 
-2. In the dropdown menus, select 'Genome' > 'GRCh38/hg38'.
+1. Navigate to the IGV application using a web browser: `https://igv.org/app/<https://igv.org/app/>`_.
 
-3. Select any of the 23 Chromosomes and zoom in to view the biotypes produced by our genome. (If you can't see anything, zoom out and navigate left or right). 
+2. Select the ``Genome`` tab and select ``Human (GRCh38/hg38)`` which is the most current version of the human genome.
 
-The blue track is known as an annotation track, which marks the start and end coordinates of (known) genes in our DNA. The vast majority of functional products listed in the annotation track are proteins, which is the main job of genes - to produce proteins. Such genes are known as protein-coding genes. 
+3. In the search bar, you can enter the specific coordinates of a gene, or the gene name. Enter ``PTEN`` to view the PTEN gene which is located at ``chr10:87,862,624-87,972,930``.
 
-Genes can code for additional molecules such as tranfer RNAs and ribosomal RNAs which we will come across in the following sections.
+4. You will notice that there are two blue lines representing PTEN. These are two isoforms of the PTEN gene. This means that the PTEN gene can produce two proteins of similar function – but they will differ slightly in composition.
+
+5. Google the PTEN gene – you will discover it is a very important gene in our genome!
 
 Central Dogma
 -------------
@@ -42,6 +44,58 @@ How does a sequence of DNA nucleotides produce a protein? The figure below shows
 * In **translation**, the sequence of the mRNA is decoded to specify the amino acid sequence of a polypeptide. The name translation reflects that the nucleotide sequence of the mRNA sequence must be translated into the completely different "language" of amino acids.
 
 The process of activating a gene to produce a fucntional protein is known as **gene expression**.
+
+Transcription Produces Genetic Messages
+---------------------------------------
+
+Transcription begins when the double stranded DNA is unwound and one strand is used as a template for making pre-mRNA. It involves several steps:
+
+``Initiation`` : The enzyme RNA polymerase binds to a specific location in DNA called a promoter region - telling the enzyme “this is where the gene starts”.
+``Elongation`` : RNA polymerase reads the nucleotide sequence of the template DNA strand. As it moves along, it inserts and links together complementary RNA nucleotides to form a pre-mRNA molecule.
+``Termination`` : The RNA polymerase breaks the link between the template DNA strand and the pre-mRNA molecule, releasing the pre-mRNA. The DNA reforms it’s double helix.
+
+.. figure:: /_static/images/transcription.png
+   :figwidth: 700px
+   :target: /_static/images/transcription.png
+   :align: center
+
+|
+
+Messenger RNA Processing
+------------------------
+
+pre-mRNAs are processed in the nucleus to remove introns (nucleotide sequences present in genes that are not translated into the amino acid sequence of a protein). Introns occur between exons, the nucleotide sequences that remain in the mRNA and are translated into the amino acid sequence of a protein.
+
+As introns are removed, the exons are spliced together to form mature mRNA molecules. I will show you an example of this later with real sequencing reads from yeast, but for now a diagram will suffice:
+
+.. figure:: /_static/images/splicing.png
+   :figwidth: 700px
+   :target: /_static/images/splicing.png
+   :align: center
+
+|
+
+Messenger RNA Translation
+-------------------------
+
+.. note:: 
+   Some definitions are required before describing translation:
+
+   **Ribosomes**: A complex (made of ribosomal RNA units) that aid in the production of proteins.
+   **transfer RNA (tRNA)**: A small RNA unit that contains a specific binding site for each amino acid. The binding site is determined by the anticodon.
+   **anticodon**: 3 nucleotide molecules that bind in complimentary fashion to the mRNA codons (3 bases).
+   Translation, like transcription, has three steps: initiation, elongation, and termination:
+
+``Initiation`` : The tRNA carrying the amino acid methionine (and the complimentary anticodon to AUG) binds to the mRNA. AUG signals the start site of protiens, and is the first amino acid in all proteins (the figure below does not show the start of the polypeptide..)
+``Elongation`` : As new tRNA molecules are recruited to the ribosome, the amino acids form a peptide bond, forming a chain of amino acids (i.e a poly peptide chain).
+``Termination`` : Termination occurs when the ribosome reaches a stop codon. The mature peptide is relased, and folded into a 3-D structure.
+
+.. figure:: /_static/images/translation_med.png
+   :figwidth: 700px
+   :target: /_static/images/translation_med.png
+   :align: center
+
+|
 
 RNA-Sequencing
 --------------
