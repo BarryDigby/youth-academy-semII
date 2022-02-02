@@ -17,7 +17,7 @@ To help you visualise these functional regions of the human genome, we will use 
 
 The annotation track marks the start and end coordinates of (known) genes in our DNA. The vast majority of functional products listed in the annotation tracks are proteins, which is the main job of genes – to produce proteins. Such genes are known as protein-coding genes.
 
-1. Navigate to the IGV application using a web browser: `https://igv.org/app/<https://igv.org/app/>`_.
+1. Navigate to the IGV application using a web browser: `https://igv.org/app/ <https://igv.org/app/>`_.
 
 2. Select the ``Genome`` tab and select ``Human (GRCh38/hg38)`` which is the most current version of the human genome.
 
@@ -25,7 +25,7 @@ The annotation track marks the start and end coordinates of (known) genes in our
 
 4. You will notice that there are two blue lines representing PTEN. These are two isoforms of the PTEN gene. This means that the PTEN gene can produce two proteins of similar function – but they will differ slightly in composition.
 
-5. Google the PTEN gene – you will discover it is a very important gene in our genome!
+5. Google the PTEN gene - you will discover it is a very important gene in our genome!
 
 Central Dogma
 -------------
@@ -90,9 +90,9 @@ Messenger RNA Translation
 ``Elongation`` : As new tRNA molecules are recruited to the ribosome, the amino acids form a peptide bond, forming a chain of amino acids (i.e a poly peptide chain).
 ``Termination`` : Termination occurs when the ribosome reaches a stop codon. The mature peptide is relased, and folded into a 3-D structure.
 
-.. figure:: /_static/images/translation_med.png
+.. figure:: /_static/images/translation_med.jpeg
    :figwidth: 700px
-   :target: /_static/images/translation_med.png
+   :target: /_static/images/translation_med.jpeg
    :align: center
 
 |
@@ -211,11 +211,11 @@ Viewing Alignments
 
 Once more, this is difficult to conceptualise so let's get some hands on experience with a file containing aligned reads. 
 
-1. Navigate to https://igv.org/app/
+1. Navigate to `https://igv.org/app/ <https://igv.org/app/>`_
 
 2. In the dropdown menu, select ``Genome``, > ``sacCer3``.
 
-3. Navigate to the following web page: `https://github.com/BarryDigby/Youth-Academy/tree/master/data<https://github.com/BarryDigby/Youth-Academy/tree/master/data>`_.
+3. Navigate to the following web page: `https://github.com/BarryDigby/Youth-Academy/tree/master/data <https://github.com/BarryDigby/Youth-Academy/tree/master/data>`_.
 
 4. Download the files ``RAP1_UNINDUCED_REP1.markdup.sorted.bam`` and ``RAP1_UNINDUCED_REP1.markdup.sorted.bam.bai``.
 
