@@ -2,7 +2,9 @@
 title: "foobar"
 author: "Barry"
 date: "2/2/2022"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 We will use the stroke dataset again to make plots that can quickly answer similar types of questions we were asking in the previous worksheet. 
@@ -18,6 +20,11 @@ With plots, the most important thing to consider is:
 Run the codeblock below to load the plotting library and the stroke dataset.
 
 ```{R}
+install.packages("ggpubr")
+library(ggpubr)
+```
+
+```{R}
 library(ggpubr)
 stroke <- data.frame(read.delim("https://raw.githubusercontent.com/BarryDigby/Youth-Academy/master/data/stroke-data.csv", sep=",", header=T))
 stroke <- stroke[which(stroke$gender != "Other"),]
@@ -30,15 +37,23 @@ Let's investigate Body Mass Index (BMI) in the dataset.
 Using ggboxplot(), make a boxplot of bmi on the y-axis and stroke on the x-axis. This will allow us to see if people with higher BMI values are more susceptible to strokes. 
 
 ```{R}
-
+install.packages("ggpubr")
+library(ggpubr)
 ```
+
+
+
+```{r}
+ggboxplot(stroke, x="stroke", y="bmi")
+```
+yes, higher bmi values could lead to a stroke 
 
 
 ## Question 2
 Produce the same plot, but this time include 'facet.by' in the code to produce a plot for both females and males using the column 'gender'. Do the results look the same? (i.e are the plots similar for both females and males)
 
 ```{R}
-
+ggboxplot(stroke, x="stroke", y="bmi", facet.by = "gender")
 ```
 
 ## Question 3
@@ -48,15 +63,21 @@ Let's investigate Age in the dataset.
 Using ggboxplot(), make a boxplot of age on the y-axis and stroke on the x-axis. This will allow us to see if people with higher ages are more susceptible to strokes. 
 
 ```{R}
-
+ggboxplot(stroke, x="stroke", y="age")
 ```
 
 ## Question 4
 Produce the same plot, but this time include 'facet.by' in the code to produce a plot for both females and males. Do the results look the same? (i.e are the plots similar for both females and males)
 
 ```{R}
-
+ggboxplot(stroke, x="stroke", y="age", facet.by="gender")
 ```
+
+
+```{r}
+ggscatter(stroke, x="age", y="bmi", facet.by = "stroke")
+```
+
 
 ## Task 1
 
@@ -65,7 +86,7 @@ Create a new column in the dataset called 'diabetic' using an 'ifelse' statement
 > If patients avg_glucose_level is greater than 200: 'Yes', else: 'No'.
 
 ```{R}
-
+stroke$diabetic <- ifelse(stroke$avg_glucose_level > 200, "Diabetic", "not-diabetic")
 ```
 
 ## Question 5
@@ -75,7 +96,7 @@ Are older patients more likely to be diabetic?
 Make a boxplot with your new column 'diabetic' on the x-axis and 'age' on the y-axis. Facet the plot using 'gender' to check if it is true for both females and males.
 
 ```{R}
-
+ggboxplot(stroke, x="diabetic", y="age", facet.by = "gender")
 ```
 
 ## Question 6
@@ -87,7 +108,7 @@ Does this mean that older people with diabetes are more likely to have a stroke?
 Make a boxplot with your new column 'diabetic' on the x-axis and 'age' on the y-axis. Facet the plot using 'stroke'. Focus on the right panel showing patients who had a stroke. Are diabetic patients more likely to have a stroke?  (boxplot is much higher/lower).
 
 ```{R}
-
+ggboxplot(stroke, x="diabetic", y="age", facet.by="stroke")
 ```
 
 This is a good example of teasing apart which variables are associated with the outcome (stroke). This takes practice, but once you are comfortable making plots, you can start to ask these types of questions yourself!
@@ -108,7 +129,7 @@ Run the code block below to make the plots:
 gene_data <- read.delim("https://raw.githubusercontent.com/BarryDigby/Youth-Academy/master/data/expr.txt", header=T, sep="\t", row.names = "bcr_patient_barcode")
 
 
-ggboxplot(gene_data, x="cancer_type", y=c("BRCA","ESR1", "MUC1", "XBP1", "PTEN", "GATA3"), combine=T, color="black", fill="cancer_type")
+ggboxplot(gene_data, x="cancer_type", y=c("ESR1", "MUC1", "XBP1", "PTEN", "GATA3"), combine=T, color="black", fill="cancer_type")
 ```
 
 Your challenge is to identify which genes are up-regulated in a cancer when compared to others. For example, we can say that GATA3 is up-regulated in BRCA (breast cancer). Google the gene name and cancer type and write a very short paragraph on your findings. 
