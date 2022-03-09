@@ -102,4 +102,4 @@ You will be presented with a list of results from mutliple species ranging from 
 
 Click on entries under the ``Assembly`` column to see if the species contains a sequence similar to the one you translated. 
 
-Knowing what you know now about the gene and it's function, think critically about why some species have this gene and others do not. 
+Knowing what you now know about the gene and it's function, think critically about why some species have this gene and others do not. (Have you ever heard of the SARS-CoV-2 virus getting diabetes? :) )
