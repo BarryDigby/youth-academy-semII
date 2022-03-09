@@ -34,13 +34,6 @@ The annotation track marks the start and end coordinates of (known) genes in our
 
 5. Google the PTEN gene - you will discover it is a very important gene in our genome!
 
-Gene Expression
----------------
-
-The process of activating a gene to produce a fucntional protein is known as **gene expression**.
-
-The biochemical process of gene expression is detailed in the following section.
-
 
 Central Dogma
 #############
