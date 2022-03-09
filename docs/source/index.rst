@@ -10,4 +10,4 @@ The materials for each week will be released as the workshop progresses.
    :hidden:
    :caption: Week 1
 
-   /week1/file1
+   /week1/file_1
