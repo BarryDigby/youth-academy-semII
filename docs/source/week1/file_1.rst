@@ -3,6 +3,13 @@ Introduction
 
 DNA is the genetic material of all organisms on Earth. When DNA is transmitted from parents to children, it can determine some of the children's characteristics (such as their eye color or hair color). How does the sequence in our DNA (A, T, G, C) actually affect humans or organisms features?
 
+.. figure:: /_static/images/chromosomes_and_DNA.png
+   :figwidth: 700px
+   :target: /_static/images/chromosomes_and_DNA.png
+   :align: center
+
+|
+
 Genes Specify Proteins
 ######################
 

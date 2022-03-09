@@ -17,3 +17,4 @@ The website can be accessed using the shortened URL below. Please type this into
    :caption: Week 1
 
    /week1/file_1
+   /week1/file_2
