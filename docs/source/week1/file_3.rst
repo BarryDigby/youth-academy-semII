@@ -81,3 +81,25 @@ Recall that DNA is a double stranded molecule, containing both a ``forward stran
 |
 
 Zoom in on the gene, you will be able to see 'less than / greater than' symbols (``>`` and ``<``) which denote if the gene is on the forward or reverse strand, respectively.
+
+Part V
+++++++
+
+To prove to you that genes are not random sequences of ``A,T,G,C`` and that they are ``evolutionarily conserved`` across organisms.. 
+
+* Copy the DNA sequence. 
+
+* Go to `BLAT <https://genome.ucsc.edu/cgi-bin/hgBlat>`_ paste the sequence, select ``search all`` and ``Submit``:
+
+.. figure:: /_static/images/blat.png
+   :figwidth: 700px
+   :target: /_static/images/blat.png
+   :align: center
+
+|
+
+You will be presented with a list of results from mutliple species ranging from mammals to small viruses and bacteria. 
+
+Click on entries under the ``Assembly`` column to see if the species contains a sequence similar to the one you translated. 
+
+Knowing what you know now about the gene and it's function, think critically about why some species have this gene and others do not. 
