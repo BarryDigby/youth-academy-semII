@@ -141,3 +141,10 @@ Translation, like transcription, has three steps: initiation, elongation, and te
    :align: center
 
 |
+
+.. figure:: /_static/images/translation_table.png
+   :figwidth: 700px
+   :target: /_static/images/translation_table.png
+   :align: center
+
+|

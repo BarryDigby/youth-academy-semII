@@ -55,10 +55,20 @@ What gene does the sequence belong to?
 
 * In your ``BLAST`` results, the gene name is given in the ``Description`` column in parentheses ``()``. (Use the top hit for this).
 
-Part IV (advanced)
-++++++++++++++++++
+Part IV
++++++++
 
-DNA is a double stranded molecule, containing both a ``forward strand`` and a ``reverse strand``:
+* Go to the IGV browser (`https://igv.org/app/ <https://igv.org/app/>`_).
+
+* In the search bar, enter the name of the gene our sequence belongs to. 
+
+1. What chromosome is the gene located on? 
+
+2. Is the gene located on the forward or reverse strand? (see below)
+
+|
+
+Recall that DNA is a double stranded molecule, containing both a ``forward strand`` and a ``reverse strand``:
 
 .. code-block:: bash
 
@@ -68,18 +78,5 @@ DNA is a double stranded molecule, containing both a ``forward strand`` and a ``
 
 .. note::
 
-    ``5'`` and ``3'`` refer to ``5 prime`` and ``3 prime`` ends of the DNA molecule. 
+    The arrows ``>`` or ``<`` indicate if the gene is on the forward or reverse strand, respectively.
 
-In the examples shown previously, ``transcription`` was shown 
-
-
-
-* Go to the IGV browser (`https://igv.org/app/ <https://igv.org/app/>`_).
-
-* In the search bar, enter the name of the gene our sequence belongs to. 
-
-* Which strand is the gene on? 
-
-.. note::
-
-    The arrows ``>`` or ``<`` indicate if the gene is on the forward or reverse strand, respectively.  
