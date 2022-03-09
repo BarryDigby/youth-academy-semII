@@ -174,3 +174,29 @@ What gene does the sequence belong to?
 
 * In your ``BLAST`` results, the gene name is given in the ``Description`` column in parentheses ``()``. (Use the top hit for this).
 
+Part IV (advanced)
+++++++++++++++++++
+
+Recall that DNA is a double stranded molecule, denoted as a ``forward strand`` and a ``reverse strand``:
+
+.. code-block:: bash
+
+    5' A G T G C T 3' (forward strand)
+       | | | | | |
+    3' T G C T G A 5' (reverse strand)
+
+.. note::
+
+    ``5'`` and ``3'`` refer to ``5 prime`` and ``3 prime`` ends of the DNA molecule. 
+
+| 
+
+* Go to the IGV browser (`https://igv.org/app/ <https://igv.org/app/>`_).
+
+* In the search bar, enter the name of the gene our sequence belongs to. 
+
+* Which strand is the gene on? 
+
+.. note::
+
+    The arrows ``>`` or ``<`` indicate if the gene is on the forward or reverse strand. 
