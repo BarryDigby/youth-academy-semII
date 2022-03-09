@@ -145,9 +145,9 @@ Once you have correctly converted the sequence to RNA, translate it into a prote
 
 Use the following table as a guide to converting your RNA sequence into a protein sequence.
 
-.. figure:: /_static/images/translation_table.jpeg
+.. figure:: /_static/images/translation_table.png
    :figwidth: 700px
-   :target: /_static/images/translation_table.jpeg
+   :target: /_static/images/translation_table.png
    :align: center
 
 |
