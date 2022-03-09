@@ -44,7 +44,7 @@ What organism does this sequence belong to?
 
 * Copy the DNA sequence and go to `NCBI BLAST <https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome>`_.
 
-* Paste the sequence into the box under ``Enter Query Sequence`` and click ``BLAST``.
+* Paste the DNA sequence into the box under ``Enter Query Sequence`` and click ``BLAST``.
 
 * When your results load, pay attention to the ``Scientific Name`` column. What species does the sequence belong to?
 
@@ -76,7 +76,6 @@ Recall that DNA is a double stranded molecule, containing both a ``forward stran
        | | | | | | | | | | |
     3' T G C T G A T C C C A 5' (reverse strand)
 
-.. note::
+|
 
-    The arrows ``>`` or ``<`` indicate if the gene is on the forward or reverse strand, respectively.
-
+Zoom in on the gene, you will be able to see 'less than / greater than' symbols (``>`` and ``<``) which denote if the gene is on the forward or reverse strand, respectively.
