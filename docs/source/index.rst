@@ -8,6 +8,6 @@ The materials for each week will be released as the workshop progresses.
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Genomics
+   :caption: Week 1
 
-   /Genomics/introduction
+   /week1/file1
