@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'TY Workshop'
+project = 'Youth Academy 2022'
 copyright = '2021, Barry Digby'
 author = 'Barry Digby'
 
