@@ -20,7 +20,9 @@ Week 1
 
 * The central dogma
 
-* 
+* Worksheet
+
+* Setting up account on RStudio Cloud
 
 .. toctree::
    :maxdepth: 2
