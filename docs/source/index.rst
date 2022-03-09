@@ -11,6 +11,17 @@ The website can be accessed using the shortened URL below. Please type this into
 
    https://tinyurl.com/YAGDS2022
 
+Week 1
+------
+
+* Introduction to DNA
+
+* A computational view of DNA
+
+* The central dogma
+
+* 
+
 .. toctree::
    :maxdepth: 2
    :hidden:

@@ -34,8 +34,16 @@ The annotation track marks the start and end coordinates of (known) genes in our
 
 5. Google the PTEN gene - you will discover it is a very important gene in our genome!
 
+Gene Expression
+---------------
+
+The process of activating a gene to produce a fucntional protein is known as **gene expression**.
+
+The biochemical process of gene expression is detailed in the following section.
+
+
 Central Dogma
--------------
+#############
 
 How does a sequence of DNA nucleotides produce a protein? The figure below shows the transfer of information from DNA > RNA > Protein which is known as the central dogma of biology. 
 
@@ -50,8 +58,6 @@ How does a sequence of DNA nucleotides produce a protein? The figure below shows
 
 * In **translation**, the sequence of the mRNA is decoded to specify the amino acid sequence of a polypeptide. The name translation reflects that the nucleotide sequence of the mRNA sequence must be translated into the completely different "language" of amino acids.
 
-The process of activating a gene to produce a fucntional protein is known as **gene expression**.
-
 Transcription Produces Genetic Messages
 #######################################
 
@@ -61,7 +67,7 @@ Transcription begins when the double stranded DNA is unwound and one strand is u
 
 #. ``Elongation`` : RNA polymerase reads the nucleotide sequence of the template DNA strand. As it moves along, it inserts and links together complementary RNA nucleotides to form a pre-mRNA molecule.
 
-#. ``Termination`` : The RNA polymerase breaks the link between the template DNA strand and the pre-mRNA molecule, releasing the pre-mRNA. The DNA reforms it’s double helix.
+#. ``Termination`` : The RNA polymerase breaks the link between the template DNA strand and the pre-mRNA molecule, releasing the pre-mRNA. The DNA reforms it's double helix.
 
 .. figure:: /_static/images/transcription.png
    :figwidth: 700px
@@ -75,7 +81,7 @@ Messenger RNA Processing
 
 pre-mRNAs are processed in the nucleus to remove introns (nucleotide sequences present in genes that are not translated into the amino acid sequence of a protein). Introns occur between exons, the nucleotide sequences that remain in the mRNA and are translated into the amino acid sequence of a protein.
 
-As introns are removed, the exons are spliced together to form mature mRNA molecules. I will show you an example of this later with real sequencing reads from yeast, but for now a diagram will suffice:
+As introns are removed, the exons are spliced together to form mature mRNA molecules.
 
 .. figure:: /_static/images/splicing.png
    :figwidth: 700px
@@ -110,3 +116,61 @@ Translation, like transcription, has three steps: initiation, elongation, and te
    :align: center
 
 |
+
+Worksheet 
+---------
+
+Part I
+++++++
+
+Your task is to translate the following DNA sequence into a protein sequence.
+
+DNA to RNA
+##########
+
+Convert the sequence below to RNA.
+
+.. note::
+
+    Recall in RNA that ``thyime (T)`` is substituted for ``uracil (U)``. 
+
+.. code-block:: bash
+
+    ATGGCCCTGTGGATGCGCCTCCTGCCCCTGCTG
+
+RNA to Protein
+##############
+
+Once you have correctly converted the sequence to RNA, translate it into a protein sequence.
+
+Use the following table as a guide to converting your RNA sequence into a protein sequence.
+
+.. figure:: /_static/images/translation_table.jpeg
+   :figwidth: 700px
+   :target: /_static/images/translation_table.jpeg
+   :align: center
+
+|
+
+.. note::
+
+    Recall that a ``triplet`` of RNA is translated to one amino acid. The first triplet ``AUG`` becomes ``Methionine (M)``.
+
+Part II
++++++++
+
+What organism does this sequence belong to? 
+
+* Copy the DNA sequence and go to `NCBI BLAST <https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome>`_.
+
+* Paste the sequence into the box under ``Enter Query Sequence`` and click ``BLAST``.
+
+* When your results load, pay attention to the ``Scientific Name`` column. What species does the sequence belong to?
+
+Part III
+++++++++
+
+What gene does the sequence belong to?
+
+* In your ``BLAST`` results, the gene name is given in the ``Description`` column in parentheses ``()``. (Use the top hit for this).
+
