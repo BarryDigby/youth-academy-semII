@@ -55,6 +55,8 @@ What gene does the sequence belong to?
 
 * In your ``BLAST`` results, the gene name is given in the ``Description`` column in parentheses ``()``. (Use the top hit for this).
 
+Google the gene name, what does this gene do?
+
 Part IV
 +++++++
 
