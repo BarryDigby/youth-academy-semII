@@ -28,4 +28,5 @@ Week 1
    :caption: Week 1
 
    /week1/file_1
+   /week1/file_3
    /week1/file_2

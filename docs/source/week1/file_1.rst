@@ -45,11 +45,11 @@ The biochemical process of gene expression is detailed in the following section.
 Central Dogma
 #############
 
-How does a sequence of DNA nucleotides produce a protein? The figure below shows the transfer of information from DNA > RNA > Protein which is known as the central dogma of biology. 
+How does a sequence of DNA nucleotides produce a protein? The figure below shows the transfer of information from DNA > RNA > Protein which is known as the ``central dogma`` of biology. 
 
-.. figure:: /_static/images/central-dogma.png
+.. figure:: /_static/images/kahn_dogma.png
    :figwidth: 700px
-   :target: /_static/images/central-dogma.png
+   :target: /_static/images/kahn_dogma.png
    :align: center
 
 |
@@ -58,20 +58,52 @@ How does a sequence of DNA nucleotides produce a protein? The figure below shows
 
 * In **translation**, the sequence of the mRNA is decoded to specify the amino acid sequence of a polypeptide. The name translation reflects that the nucleotide sequence of the mRNA sequence must be translated into the completely different "language" of amino acids.
 
+RNA polymerase
+##############
+
+The main player in transcription is an enzyme called ``RNA polymerase``, which uses a single stranded DNA template to synthesize a complementary strand of RNA. 
+
+RNA polymerase builds the new RNA strand in the 5' to 3' direction.
+
+.. figure:: /_static/images/kahn_rnapol.png
+   :figwidth: 700px
+   :target: /_static/images/kahn_rnapol.png
+   :align: center
+
+|
+
 Transcription Produces Genetic Messages
 #######################################
 
 Transcription begins when the double stranded DNA is unwound and one strand is used as a template for making pre-mRNA. It involves several steps:
 
-#. ``Initiation`` : The enzyme RNA polymerase binds to a specific location in DNA called a promoter region - telling the enzyme “this is where the gene starts”.
+1. ``Initiation`` : The enzyme RNA polymerase binds to a specific location in DNA called a promoter region - telling the enzyme “this is where the gene starts”.
 
-#. ``Elongation`` : RNA polymerase reads the nucleotide sequence of the template DNA strand. As it moves along, it inserts and links together complementary RNA nucleotides to form a pre-mRNA molecule.
-
-#. ``Termination`` : The RNA polymerase breaks the link between the template DNA strand and the pre-mRNA molecule, releasing the pre-mRNA. The DNA reforms it's double helix.
-
-.. figure:: /_static/images/transcription.png
+.. figure:: /_static/images/kahn_initiation.png
    :figwidth: 700px
-   :target: /_static/images/transcription.png
+   :target: /_static/images/kahn_initiation.png
+   :align: center
+
+|
+
+2. ``Elongation`` : RNA polymerase reads the nucleotide sequence of the template DNA strand. As it moves along, it inserts and links together complementary RNA nucleotides to form a pre-mRNA molecule.
+
+.. note::
+
+    The new RNA transcript carries the same information as the ``coding strand`` of the DNA, resulting in an identical copy with ``thymine (T)`` substituted for ``uracil (U)``.
+
+.. figure:: /_static/images/kahn_elongation.png
+   :figwidth: 700px
+   :target: /_static/images/kahn_elongation.png
+   :align: center
+
+|
+
+3. ``Termination`` : The RNA polymerase breaks the link between the template DNA strand and the pre-mRNA molecule, releasing the pre-mRNA. The DNA reforms it's double helix.
+
+.. figure:: /_static/images/kahn_termination.png
+   :figwidth: 700px
+   :target: /_static/images/kahn_termination.png
    :align: center
 
 |
@@ -83,9 +115,9 @@ pre-mRNAs are processed in the nucleus to remove introns (nucleotide sequences p
 
 As introns are removed, the exons are spliced together to form mature mRNA molecules.
 
-.. figure:: /_static/images/splicing.png
+.. figure:: /_static/images/kahn_splicing.png
    :figwidth: 700px
-   :target: /_static/images/splicing.png
+   :target: /_static/images/kahn_splicing.png
    :align: center
 
 |
@@ -116,87 +148,3 @@ Translation, like transcription, has three steps: initiation, elongation, and te
    :align: center
 
 |
-
-Worksheet 
----------
-
-Part I
-++++++
-
-Your task is to translate the following DNA sequence into a protein sequence.
-
-DNA to RNA
-##########
-
-Convert the sequence below to RNA.
-
-.. note::
-
-    Recall in RNA that ``thyime (T)`` is substituted for ``uracil (U)``. 
-
-.. code-block:: bash
-
-    ATGGCCCTGTGGATGCGCCTCCTGCCCCTGCTG
-
-RNA to Protein
-##############
-
-Once you have correctly converted the sequence to RNA, translate it into a protein sequence.
-
-Use the following table as a guide to converting your RNA sequence into a protein sequence.
-
-.. figure:: /_static/images/translation_table.png
-   :figwidth: 700px
-   :target: /_static/images/translation_table.png
-   :align: center
-
-|
-
-.. note::
-
-    Recall that a ``triplet`` of RNA is translated to one amino acid. The first triplet ``AUG`` becomes ``Methionine (M)``.
-
-Part II
-+++++++
-
-What organism does this sequence belong to? 
-
-* Copy the DNA sequence and go to `NCBI BLAST <https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome>`_.
-
-* Paste the sequence into the box under ``Enter Query Sequence`` and click ``BLAST``.
-
-* When your results load, pay attention to the ``Scientific Name`` column. What species does the sequence belong to?
-
-Part III
-++++++++
-
-What gene does the sequence belong to?
-
-* In your ``BLAST`` results, the gene name is given in the ``Description`` column in parentheses ``()``. (Use the top hit for this).
-
-Part IV (advanced)
-++++++++++++++++++
-
-Recall that DNA is a double stranded molecule, denoted as a ``forward strand`` and a ``reverse strand``:
-
-.. code-block:: bash
-
-    5' A G T G C T 3' (forward strand)
-       | | | | | |
-    3' T G C T G A 5' (reverse strand)
-
-.. note::
-
-    ``5'`` and ``3'`` refer to ``5 prime`` and ``3 prime`` ends of the DNA molecule. 
-
-| 
-
-* Go to the IGV browser (`https://igv.org/app/ <https://igv.org/app/>`_).
-
-* In the search bar, enter the name of the gene our sequence belongs to. 
-
-* Which strand is the gene on? 
-
-.. note::
-
-    The arrows ``>`` or ``<`` indicate if the gene is on the forward or reverse strand. 

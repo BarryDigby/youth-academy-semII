@@ -16,7 +16,7 @@ Please follow the steps below to:
 4. :ref:`Install Packages`
 
 Create Account
-==============
+##############
 
 Navigate to the `R Studio Cloud <https://rstudio-cloud.com/>`_ website and click on the ``GET STARTED FOR FREE`` button.
 
@@ -48,7 +48,7 @@ Select ``R Studio Cloud`` from the options listed below:
 |
 
 Create Project
-==============
+##############
 
 Once your account has been created, you need to create a project for the workshop. This is to let ``R Studio Cloud`` know what type of environment you want to work in, and allows them to track your resource usage. 
 
@@ -62,7 +62,7 @@ Select New Project > New R Studio Project.
 |
 
 R Markdown
-==========
+##########
 
 During the workshop we want to be able to create ``PDF`` or ``HTML`` documents containing our code and code outputs. To do this, we will be using the ``R Markdown`` document type.
 
@@ -80,7 +80,7 @@ You will be prompted to install packages, select yes.
 You can now make ``R Markdown`` documents, which we will return to later in the workshop. 
 
 Install Packages
-================
+################
 
 In your project workspace, you have some very basic packages that come pre-installed. We will need to install more packages for the workshop. 
 
