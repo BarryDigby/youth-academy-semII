@@ -5,6 +5,12 @@ This website contains all of the necessary materials to run NUIG Youth Academy G
 
 The materials for each week will be released as the workshop progresses.
 
+The website can be accessed using the shortened URL below. Please type this into your broswer
+
+.. code-block:: bash
+
+   https://tinyurl.com/YAGDS2022
+
 .. toctree::
    :maxdepth: 2
    :hidden:
