@@ -129,7 +129,7 @@ Let's update our previous vectors to include two new drivers and their racing nu
 .. code-block:: r
 
     racing_number <- c(racing_number, 16, 24)
-    driver_names <- c(drivers, "Leclerc", "Zhou")
+    driver_names <- c(driver_names, "Leclerc", "Zhou")
     names(racing_number) <- driver_names
     drivers <- racing_number
     print(drivers)
