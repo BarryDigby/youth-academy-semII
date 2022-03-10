@@ -14,15 +14,12 @@ The website can be accessed using the shortened URL below. Please type this into
 Week 1
 ------
 
-* Introduction to DNA
-
-* A computational view of DNA
-
-* The central dogma
-
-* Worksheet
+As week 1 is conducted in person, we will begin with coding in ``RStudio`` so any coding bugs can be resolved in person.
 
 * Setting up account on RStudio Cloud
+
+* Introduction to R
+
 
 .. toctree::
    :maxdepth: 2
@@ -30,5 +27,5 @@ Week 1
    :caption: Week 1
 
    /week1/file_1
-   /week1/file_3
    /week1/file_2
+

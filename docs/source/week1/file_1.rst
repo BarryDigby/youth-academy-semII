@@ -1,150 +1,101 @@
-Introduction
-------------
+R Studio Cloud
+==============
 
-DNA is the genetic material of all organisms on Earth. When DNA is transmitted from parents to children, it can determine some of the children's characteristics (such as their eye color or hair color). How does the sequence in our DNA (A, T, G, C) actually affect humans or organisms features?
+During the workshop, we will be using the statistical computing software called ``R`` to perform calculations and produce data visualisations.
 
-.. figure:: /_static/images/chromosomes_and_DNA.png
-   :figwidth: 700px
-   :target: /_static/images/chromosomes_and_DNA.png
-   :align: center
+Fortunately, we have a cloud-based version of R available to us at the following website: `R Studio Cloud <https://rstudio-cloud.com/>`_.
 
-|
+Please follow the steps below to:
 
-Genes Specify Proteins
-######################
+1. :ref:`Create Account`
 
-Within the vast stretches of DNA in our genome are biologically functional stretches of DNA called genes. 
+2. :ref:`Create Project`
 
-Each gene provides instructions for a functional product, that is, a molecule needed to perform a job in the cell. In many cases, the functional product of a gene is a protein.
+3. :ref:`R Markdown`
 
-Visualising the human genome
-#############################
+4. :ref:`Install Packages`
 
-To help you visualise these functional regions of the human genome, we will use an application called the Integrative Genomics Viewer (IGV) which is a high-performance, easy-to-use, interactive tool for the visual exploration of genomic data. Once we have selected the genome to view, an annotation track is automatically loaded in the browser (you may have to zoom in to view it).
-
-The annotation track marks the start and end coordinates of (known) genes in our DNA. The vast majority of functional products listed in the annotation tracks are proteins, which is the main job of genes – to produce proteins. Such genes are known as protein-coding genes.
-
-1. Navigate to the IGV application using a web browser: `https://igv.org/app/ <https://igv.org/app/>`_.
-
-2. Select the ``Genome`` tab and select ``Human (GRCh38/hg38)`` which is the most current version of the human genome.
-
-3. In the search bar, you can enter the specific coordinates of a gene, or the gene name. Enter ``PTEN`` to view the PTEN gene which is located at ``chr10:87,862,624-87,972,930``.
-
-4. You will notice that there are two blue lines representing PTEN. These are two isoforms of the PTEN gene. This means that the PTEN gene can produce two proteins of similar function – but they will differ slightly in composition.
-
-5. Google the PTEN gene - you will discover it is a very important gene in our genome!
-
-
-Central Dogma
-#############
-
-How does a sequence of DNA nucleotides produce a protein? The figure below shows the transfer of information from DNA > RNA > Protein which is known as the ``central dogma`` of biology. 
-
-.. figure:: /_static/images/kahn_dogma.png
-   :figwidth: 700px
-   :target: /_static/images/kahn_dogma.png
-   :align: center
-
-|
-
-* In **transcription**, the DNA sequence of a gene is copied to make an RNA molecule. This step is called transcription because it involves rewriting, or transcribing, the DNA sequence in a similar RNA "alphabet." In eukaryotes, the RNA molecule must undergo processing to become a mature messenger RNA (mRNA).
-
-* In **translation**, the sequence of the mRNA is decoded to specify the amino acid sequence of a polypeptide. The name translation reflects that the nucleotide sequence of the mRNA sequence must be translated into the completely different "language" of amino acids.
-
-RNA polymerase
+Create Account
 ##############
 
-The main player in transcription is an enzyme called ``RNA polymerase``, which uses a single stranded DNA template to synthesize a complementary strand of RNA. 
+Navigate to the `R Studio Cloud <https://rstudio-cloud.com/>`_ website and click on the ``GET STARTED FOR FREE`` button.
 
-RNA polymerase builds the new RNA strand in the 5' to 3' direction.
-
-.. figure:: /_static/images/kahn_rnapol.png
+.. figure:: /_static/images/r_cloud_1.png
    :figwidth: 700px
-   :target: /_static/images/kahn_rnapol.png
+   :target: /_static/images/r_cloud_1.png
    :align: center
 
 |
 
-Transcription Produces Genetic Messages
-#######################################
+Select a free acount. This will provide us with enough resources for the workshop (1 GB RAM, 1 CPU and 25 hours per month). In reality this is a tiny resource allocation - many computational operations in genomics require exponentially more resources which are performed on high performance compute (HPC) clusters or more recently, on the cloud. 
 
-Transcription begins when the double stranded DNA is unwound and one strand is used as a template for making pre-mRNA. It involves several steps:
-
-1. ``Initiation`` : The enzyme RNA polymerase binds to a specific location in DNA called a promoter region - telling the enzyme “this is where the gene starts”.
-
-.. figure:: /_static/images/kahn_initiation.png
+.. figure:: /_static/images/r_cloud_2.png
    :figwidth: 700px
-   :target: /_static/images/kahn_initiation.png
+   :target: /_static/images/r_cloud_2.png
    :align: center
 
 |
 
-2. ``Elongation`` : RNA polymerase reads the nucleotide sequence of the template DNA strand. As it moves along, it inserts and links together complementary RNA nucleotides to form a pre-mRNA molecule.
+Enter a valid email address and fill out the rest of the information (password, name). ``R Studio Cloud`` will send you an email with a link to verify your email address. Click on the link to verify your email address - you should now be able to log into ``R Studio Cloud``.
 
-.. note::
+Select ``R Studio Cloud`` from the options listed below:
 
-    The new RNA transcript carries the same information as the ``coding strand`` of the DNA, resulting in an identical copy with ``thymine (T)`` substituted for ``uracil (U)``.
-
-.. figure:: /_static/images/kahn_elongation.png
+.. figure:: /_static/images/r_cloud_3.png
    :figwidth: 700px
-   :target: /_static/images/kahn_elongation.png
+   :target: /_static/images/r_cloud_3.png
    :align: center
 
 |
 
-3. ``Termination`` : The RNA polymerase breaks the link between the template DNA strand and the pre-mRNA molecule, releasing the pre-mRNA. The DNA reforms it's double helix.
+Create Project
+##############
 
-.. figure:: /_static/images/kahn_termination.png
+Once your account has been created, you need to create a project for the workshop. This is to let ``R Studio Cloud`` know what type of environment you want to work in, and allows them to track your resource usage. 
+
+Select New Project > New R Studio Project.
+
+.. figure:: /_static/images/r_cloud_4.png
    :figwidth: 700px
-   :target: /_static/images/kahn_termination.png
+   :target: /_static/images/r_cloud_4.png
    :align: center
 
 |
 
-Messenger RNA Processing
-########################
+R Markdown
+##########
 
-pre-mRNAs are processed in the nucleus to remove introns (nucleotide sequences present in genes that are not translated into the amino acid sequence of a protein). Introns occur between exons, the nucleotide sequences that remain in the mRNA and are translated into the amino acid sequence of a protein.
+During the workshop we want to be able to create ``PDF`` or ``HTML`` documents containing our code and code outputs. To do this, we will be using the ``R Markdown`` document type.
 
-As introns are removed, the exons are spliced together to form mature mRNA molecules.
+In your project workspace, select File > New File > R Markdown...
 
-.. figure:: /_static/images/kahn_splicing.png
+You will be prompted to install packages, select yes. 
+
+.. figure:: /_static/images/r_cloud_5.png
    :figwidth: 700px
-   :target: /_static/images/kahn_splicing.png
+   :target: /_static/images/r_cloud_5.png
    :align: center
 
-|
+| 
 
-Messenger RNA Translation
-#########################
+You can now make ``R Markdown`` documents, which we will return to later in the workshop. 
 
-.. note:: 
-   Some definitions are required before describing translation:
+Install Packages
+################
 
-   #. **Ribosomes**: A complex (made of ribosomal RNA units) that aid in the production of proteins.
-   
-   #. **transfer RNA (tRNA)**: A small RNA unit that contains a specific binding site for each amino acid. The binding site is determined by the anticodon.
-   
-   #. **anticodon**: 3 nucleotide molecules that bind in complimentary fashion to the mRNA codons (3 bases).
-   
-Translation, like transcription, has three steps: initiation, elongation, and termination:
+In your project workspace, you have some very basic packages that come pre-installed. We will need to install more packages for the workshop. 
 
-#. ``Initiation`` : The tRNA carrying the amino acid methionine (and the complimentary anticodon to AUG) binds to the mRNA. AUG signals the start site of protiens, and is the first amino acid in all proteins (the figure below does not show the start of the polypeptide..)
+Installing packages to your workspace is analogous to installing apps on your phone via the App Store / Google Play except we are installing packages from ``Bioconductor`` - a home for open source bioinformatics software.
 
-#. ``Elongation`` : As new tRNA molecules are recruited to the ribosome, the amino acids form a peptide bond, forming a chain of amino acids (i.e a poly peptide chain).
+In the ``console``, please insert the following lines of code to install the required packages:
 
-#. ``Termination`` : Termination occurs when the ribosome reaches a stop codon. The mature peptide is relased, and folded into a 3-D structure.
+.. code-block:: R
 
-.. figure:: /_static/images/translation_med.jpeg
-   :figwidth: 700px
-   :target: /_static/images/translation_med.jpeg
-   :align: center
+    install.packages("ggplot2")
+    install.packages("pheatmap")
+    install.packages("ggpubr")
+    install.packages("rcolorbrewer")
+    install.packages("cluster")
+    install.packages("gplots")
+    install.packages("caret")
+    install.packages("e1071")
 
-|
-
-.. figure:: /_static/images/translation_table.png
-   :figwidth: 700px
-   :target: /_static/images/translation_table.png
-   :align: center
-
-|
