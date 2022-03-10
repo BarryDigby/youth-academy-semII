@@ -14,11 +14,15 @@ The website can be accessed using the shortened URL below. Please type this into
 Week 1
 ------
 
-As week 1 is conducted in person, we will begin with coding in ``RStudio`` so any coding bugs can be resolved in person.
+1. Introduction to DNA
 
-* Setting up account on RStudio Cloud
+2. Visualising genomes in IGV
 
-* Introduction to R
+3. Central Dogma of biology
+
+4. Investigating a sequence of DNA (Worksheet)
+
+5. RStudio cloud set up
 
 
 .. toctree::
