@@ -22,7 +22,7 @@ As week 1 is conducted in person, we will begin with coding in ``RStudio`` so an
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :hidden:
    :caption: Week 1
 
