@@ -1,3 +1,20 @@
+Intro to coding
+###############
+
+Code blocks
+===========
+
+In RStudio you can create a code block in the ``Code editor`` by clicking on the ``+`` button:
+
+.. figure:: /_static/images/code-block.gif
+   :figwidth: 700px
+   :target: /_static/images/code-block.gif
+   :align: center
+
+|
+
+Insert code you want to execute in these blocks - any text outside of a code block is treated as regular text and is not evaluated. 
+
 Variables
 ===========
 

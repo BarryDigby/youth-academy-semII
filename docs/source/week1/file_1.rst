@@ -61,6 +61,30 @@ Select New Project > New R Studio Project.
 
 |
 
+R Studio Interface
+##################
+
+When you open your project, you will be presented with a window containing four panels:
+
+1. ``Code editor``: You can type and execute code in this window. The benefit of this window is your code is saved in a 'notebook' allowing you to save your work.
+
+2. ``R console``: You can also execute code here, but the code is not saved. The console also outputs error messages and is useful for debugging errors. 
+
+3. ``Workspace and History``: Any data object you create is saved in this panel. You can click on any of the objects to view them in a separate tab in the ``Code editor`` window.
+
+4. ``Plots and Files``: This panel is primarily used to view any files present in your folder and check what packages you have loaded in your current session. 
+
+.. note::
+
+   The ``Plots and Files`` panel will not display many files as the folder is on the cloud - not your computer/laptop!
+
+.. figure:: /_static/images/rstudio_interface.png
+   :figwidth: 700px
+   :target: /_static/images/rstudio_interface.png
+   :align: center
+
+|
+
 R Markdown
 ##########
 
