@@ -28,4 +28,5 @@ As week 1 is conducted in person, we will begin with coding in ``RStudio`` so an
 
    /week1/file_1
    /week1/file_2
+   /week1/file_3
 
