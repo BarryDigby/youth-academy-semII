@@ -1,6 +1,9 @@
 Worksheet 
 ---------
 
+Groups
+######
+
 Split into your group and translate a DNA sequence to a protein, and investigate the origin of the DNA sequence. 
 
 .. figure:: /_static/images/YA_groups.png
@@ -11,33 +14,33 @@ Split into your group and translate a DNA sequence to a protein, and investigate
 |
 
 Group 1 DNA sequence
---------------------
+++++++++++++++++++++
 
 .. code-block:: bash
 
     ATGGCCCTGTGGATGCGCCTCCTGCCCCTGCTG
 
 Group 2 DNA sequence
---------------------
+++++++++++++++++++++
 
 .. code-block:: bash
 
     ATGAACGCCCCTCTCGGTGGAATCTGGCTCTGG
 
 Group 3 DNA sequence
---------------------
+++++++++++++++++++++
 
 .. code-block:: bash
 
     ATGGCACACGCTATGGAAAACTCCTGGACAATC
 
 Part I
-++++++
+######
 
 Your task is to translate the DNA sequence into a protein sequence.
 
 DNA to RNA
-##########
+++++++++++
 
 Convert the DNA to RNA
 
@@ -47,7 +50,7 @@ Convert the DNA to RNA
 
 
 RNA to Protein
-##############
+++++++++++++++
 
 Once you have correctly converted the sequence to RNA, translate it into a protein sequence.
 
@@ -65,7 +68,7 @@ Use the following table as a guide to converting your RNA sequence into a protei
     Recall that a ``triplet`` of RNA is translated to one amino acid. The first triplet ``AUG`` becomes ``Methionine (M)``.
 
 Part II
-+++++++
+#######
 
 What organisms is this gene present in?
 
@@ -80,7 +83,7 @@ What organisms is this gene present in?
     Scientific names are given in Latin - google the scientific names to see what the species is in english!
 
 Part III
-++++++++
+########
 
 What gene does the sequence belong to?
 
@@ -89,7 +92,7 @@ What gene does the sequence belong to?
 Google the gene name, what does this gene do? Provide a few sentences on the genes function.
 
 Part IV
-+++++++
+#######
 
 * Go to the IGV browser (`https://igv.org/app/ <https://igv.org/app/>`_).
 
