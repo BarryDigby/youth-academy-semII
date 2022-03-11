@@ -1,23 +1,50 @@
 Worksheet 
 ---------
 
+Split into your group and translate a DNA sequence to a protein, and investigate the origin of the DNA sequence. 
+
+.. figure:: /_static/images/YA_groups.png
+   :figwidth: 700px
+   :target: /_static/images/YA_groups.png
+   :align: center
+
+|
+
+Group 1 DNA sequence
+--------------------
+
+.. code-block:: bash
+
+    ATGGCCCTGTGGATGCGCCTCCTGCCCCTGCTG
+
+Group 2 DNA sequence
+--------------------
+
+.. code-block:: bash
+
+    ATGAACGCCCCTCTCGGTGGAATCTGGCTCTGG
+
+Group 3 DNA sequence
+--------------------
+
+.. code-block:: bash
+
+    ATGGCACACGCTATGGAAAACTCCTGGACAATC
+
 Part I
 ++++++
 
-Your task is to translate the following DNA sequence into a protein sequence.
+Your task is to translate the DNA sequence into a protein sequence.
 
 DNA to RNA
 ##########
 
-Convert the sequence below to RNA.
+Convert the DNA to RNA
 
 .. note::
 
     Recall in RNA that ``thyime (T)`` is substituted for ``uracil (U)``. 
 
-.. code-block:: bash
-
-    ATGGCCCTGTGGATGCGCCTCCTGCCCCTGCTG
 
 RNA to Protein
 ##############
@@ -40,22 +67,26 @@ Use the following table as a guide to converting your RNA sequence into a protei
 Part II
 +++++++
 
-What organism does this sequence belong to? 
+What organisms is this gene present in?
 
 * Copy the DNA sequence and go to `NCBI BLAST <https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome>`_.
 
 * Paste the DNA sequence into the box under ``Enter Query Sequence`` and click ``BLAST``.
 
-* When your results load, pay attention to the ``Scientific Name`` column. What species does the sequence belong to?
+* When your results load, pay attention to the ``Scientific Name`` column. What species does the sequence belong to? For some groups you will get multiple species - select a few. 
+
+.. note::
+
+    Scientific names are given in Latin - google the scientific names to see what the species is in english!
 
 Part III
 ++++++++
 
 What gene does the sequence belong to?
 
-* In your ``BLAST`` results, the gene name is given in the ``Description`` column in parentheses ``()``. (Use the top hit for this).
+* In your ``BLAST`` results, the gene name is given in the ``Description`` column in parentheses ``()``.
 
-Google the gene name, what does this gene do?
+Google the gene name, what does this gene do? Provide a few sentences on the genes function.
 
 Part IV
 +++++++
@@ -81,25 +112,3 @@ Recall that DNA is a double stranded molecule, containing both a ``forward stran
 |
 
 Zoom in on the gene, you will be able to see 'less than / greater than' symbols (``>`` and ``<``) which denote if the gene is on the forward or reverse strand, respectively.
-
-Part V
-++++++
-
-To prove to you that genes are not random sequences of ``A,T,G,C`` and that they are ``evolutionarily conserved`` across organisms.. 
-
-* Copy the DNA sequence. 
-
-* Go to `BLAT <https://genome.ucsc.edu/cgi-bin/hgBlat>`_ paste the sequence, select ``search all`` and ``Submit``:
-
-.. figure:: /_static/images/blat.png
-   :figwidth: 700px
-   :target: /_static/images/blat.png
-   :align: center
-
-|
-
-You will be presented with a list of results from mutliple species ranging from mammals to small viruses and bacteria. 
-
-Click on entries under the ``Assembly`` column to see if the species contains a sequence similar to the one you translated. 
-
-Knowing what you now know about the gene and it's function, think critically about why some species have this gene and others do not. (Have you ever heard of the SARS-CoV-2 virus getting diabetes? :) )
