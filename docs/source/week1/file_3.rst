@@ -18,7 +18,7 @@ Please follow the steps below to:
 Create Account
 ##############
 
-Navigate to the `R Studio Cloud <https://rstudio-cloud.com/>`_ website and click on the ``GET STARTED FOR FREE`` button.
+Navigate to the `R Studio Cloud <https://rstudio.cloud/>`_ website and click on the ``GET STARTED FOR FREE`` button.
 
 .. figure:: /_static/images/r_cloud_1.png
    :figwidth: 700px
