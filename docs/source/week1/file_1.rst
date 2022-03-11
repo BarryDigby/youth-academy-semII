@@ -22,7 +22,7 @@ Visualising the human genome
 
 To help you visualise these functional regions of the human genome, we will use an application called the Integrative Genomics Viewer (IGV) which is a high-performance, easy-to-use, interactive tool for the visual exploration of genomic data. Once we have selected the genome to view, an annotation track is automatically loaded in the browser (you may have to zoom in to view it).
 
-The annotation track marks the start and end coordinates of (known) genes in our DNA. The vast majority of functional products listed in the annotation tracks are proteins, which is the main job of genes – to produce proteins. Such genes are known as protein-coding genes.
+The annotation track marks the start and end coordinates of (known) genes in our DNA. The vast majority of functional products listed in the annotation tracks are proteins, which is the main job of genes: to produce proteins. Such genes are known as protein-coding genes.
 
 1. Navigate to the IGV application using a web browser: `https://igv.org/app/ <https://igv.org/app/>`_.
 
@@ -114,6 +114,10 @@ As introns are removed, the exons are spliced together to form mature mRNA molec
    :align: center
 
 |
+
+.. admonition:: \ \
+
+   Go back to ``IGV`` and look at the ``DHDH`` gene. Notice that this gene produces two transcripts. How many exons are in each transcript variant of the ``DHDH`` gene?
 
 Messenger RNA Translation
 #########################
