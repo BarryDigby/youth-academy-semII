@@ -25,6 +25,21 @@ Week 1
 5. RStudio cloud set up
 
 
+Week 2
+------
+
+1. Recap of RStudio Basics
+
+2. Introduction to variables, vectors and lists
+
+3. Introduction to dataframes
+
+4. Working with dataframes
+
+5. Stroke dataset worksheet
+
+
+
 .. toctree::
    :maxdepth: 3
    :hidden:
