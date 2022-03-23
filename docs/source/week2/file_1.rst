@@ -283,7 +283,7 @@ Manipulating Dataframes
 #######################
 
 Dataframe Indexes
------------------
+=================
 
 There are situations where we will need to isolate columns or rows for an analysis. The same numerical indexing logic from vectors applies, but there are **two entries to the square brackets** - one for rows, and one for columns. 
 
@@ -297,7 +297,7 @@ There are situations where we will need to isolate columns or rows for an analys
 Like lists, we can provide human readable names to access a specific column: ``iris$Sepal.Width``.
 
 Subsetting Dataframes
----------------------
+=====================
 
 Now that we know how to isolate specific cells of a dataframe, the next step is to apply these changes by 'slicing the dataframe'. Slicing a subsetting are interchangeable - I will nearly always call it subsetting. 
 
@@ -325,7 +325,7 @@ Personally, I prefer the use of the ``subset()`` function. The above operations 
     It is rare that you would select/drop observations from a dataset in this manner (do not cherry pick your data). This is why the examples are all done on columns.
 
 Filtering Dataframes
---------------------
+====================
 
 Filtering dataframes is an extension of dataframe subsetting, performed using ``logical operators``:
 
@@ -346,7 +346,7 @@ Using the ``Iris`` dataset as an example, subset the original dataframe to isola
     setosa_data <- subset(iris, iris$Species == "Setosa")
 
 Updating Dataframes
--------------------
+===================
 
 To create a new variable in our dataframe, we can use the ``$`` operator. 
 
