@@ -102,42 +102,6 @@ Change the ``greeting`` variable to hold the string ``"Hello user"`` and print t
 
 Note the environment variable has been updated to reflect this change. 
 
-Calculations
-============
-
-R is a statistical computing software and at it's core, an oversided calculator.
-
-R performs addition, subtraction, multiplication, division, exponentiation and modulo with ``* - + / ^ %%``.
-
-.. code-block:: r
-
-    1 + 4
-    10 - 1
-    12 * 3
-    1 / 6
-    2 ^ 6
-    3 %% 9
-
-.. code-block:: console
-
-    [1] 5
-    [2] 9
-    [3] 36
-    [4] 0.16666666666666666
-    [5] 64
-    [6] 3
-
-It is common practice to store the results of a calculation in a variable:
-
-.. code-block:: r
-
-    x <- 1 + 4
-    print(x)
-
-.. code-block:: console
-
-    [1] 5
-
 Vectors
 =======
 
