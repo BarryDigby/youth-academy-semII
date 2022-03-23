@@ -7,3 +7,9 @@ The ``Rmd`` file is located at: `this web page <https://raw.githubusercontent.co
 
 You will need to copy the contents of the file and paste them into your RStudio Cloud IDE:
 
+.. figure:: /_static/images/worksheet_week2.gif
+   :figwidth: 700px
+   :target: /_static/images/worksheet_week2.gif
+   :align: center
+
+|
