@@ -1,112 +1,141 @@
 ---
-title: "Dataframe Subsetting"
+title: "Dataframe Analysis"
 author: "Barry"
 date: "2/2/2022"
 output: html_document
 ---
 
-For this exercise you will work with a Stroke Dataset, which has work, marital status and some clinical variables recorded such as glucose levels, bmi etc. The variable stroke indicates if the patient has had a stroke. 
+According to the World Health Organization (WHO) stroke is the 2nd leading cause of death globally, responsible for approximately 11% of total deaths.
+This dataset is used to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status. Each row in the data provides relavant information about the patient:
 
-If you are twinkly eyes, you might use these kinds of datasets for finding patterns that help identify future strokes in new patients before they happen. 
+Attribute Information
+1) gender: "Male", "Female"
+2) age: age of the patient
+3) hypertension: No if the patient doesn't have hypertension, Yes if the patient has hypertension
+4) heart_disease: No if the patient doesn't have any heart diseases, Yes if the patient has a heart disease
+5) ever_married: "No" or "Yes"
+6) work_type: "children", "Govt_jov", "Never_worked", "Private" or "Self-employed"
+7) Residence_type: "Rural" or "Urban"
+8) avg_glucose_level: average glucose level in blood
+9) bmi: body mass index
+10) smoking_status: "formerly smoked", "never smoked", "smokes" or "Unknown"*
+11) stroke: Yes if the patient had a stroke and No if not
 
-If you are working in health insurance, you might charge a higher rate for a customer whose characteristics match those who had a stroke. 
+*Note: "Unknown" in smoking_status means that the information is unavailable for this patient
 
-Load the dataset in the code block below to get started (please take the time to view the dataframe first).
+Please do not edit the code block below. For those interested, I am performing some basic cleaning on the dataset by 1. Removing the observation whose sex is not recorded (Other) 2. Setting the 'ID' column to rownames 3. Converting the character columns to factors.
 
-Raise you hand at any stage to ask for help :) 
+Run the code block to load the dataset.
 
 ```{R}
-stroke <- data.frame(read.delim("https://raw.githubusercontent.com/BarryDigby/Youth-Academy/master/data/stroke-data.csv", sep=",", header=T))
+library(dplyr)
+dataset <- data.frame(read.delim("https://raw.githubusercontent.com/BarryDigby/Youth-Academy/master/data/stroke-data.csv", sep=",", header=T))
+dataset <- dataset[-c(which(dataset$gender == "Other")),]
+rownames(dataset) <- dataset$id
+dataset <- dataset[,c(2:length(dataset))]
+factor_features <- c("gender", "hypertension", "heart_disease", "ever_married", "work_type", "Residence_type", "smoking_status", "stroke")
+dataset <- dataset %>%
+  mutate_at(factor_features, as.factor)
 ```
 
 
-## Question 1
-How many patients are there in the dataset? 
+# Part 1
 
-Save your answer as a variable called n_patients and uncomment the second line (remove the #) to print your answer fully.
+First, answer some basic questions about the dataset. 
+
+Create a new code block and record your answers below the code block:
+
+Q1: How many patients are in the dataset? 
+
+Q2: How many males and females are in the dataset? (Hint: use table() on the gender column).
+
+Q3: What is the age of the youngest and eldest patient in the dataset? (Hint use min() and max() on the age column).
+
+Q4: How many patients in the datset have had a stroke? (similar to Q2)
+
+< delete this line and create a code block to answer the questions >
+
+A1:
+
+A2:
+
+A3:
+
+A4:
+
+
+# Part 2
+
+We will investigate the effect of gender on the risk of having a stroke.
+
+Create a code block below and split the dataframe by gender, creating two new dataframes called 'male_df' and 'female_df', respectively. (Hint: use the subset() function as shown on the website)
+
+< delete this line and create a code block splitting the dataset into males and females >
+
+Q1: Based on the two dataframes, report the number of females that have had strokes and the number of males that have had strokes. (Hint: use table() on the stroke column for each dataframe).
+
+< delete this line and create a code block to answer the question >
+
+A1: 
+
+# Part 3
+
+The answer reported in Part 2 could be misleading. If there are more males than females or vice versa, then the result given in Part 2 could be due to sampling bias.
+
+To overcome sampling bias, we will generate a new statistic called 'stroke rate' for females and males in a three step process:
+
+* Calculate the number of males that have had a stroke and save it as a variable called 'n_stroke_male'
+
+* Calculate the number of males in the dataset and save it as a variable called 'n_males'
+
+* Divide n_stroke_males/n_males to compute the rate of strokes in men. Save the result to a variable. 
+
+Repeat the above process for females and report your answer for each gender below the code block.
+
+< delete this line to calculate the rate of strokes in males and females >
+
+A1: 
+
+Is the rate of strokes higher in males or females? 
+
+# Part 4
+
+A tabloid newspaper has contacted you and wants to run the headline "Marriage causes strokes!". Investigate the hypothesis below (or hang up the phone) and report your findings to him/her.
+
+Split the original dataset into two new dataframe called 'married' 'single' using the subset() function, just like you did previously for males and females.
+
+< delete this line and split the dataset, saving the two new variables > 
+
+Q1: How many married patients have had a stroke? 
+
+Q2: How many single patients have had a stroke? 
+
+< delete this line to create a new code block to answer the above quesions >
+
+A1: 
+
+A2:
+
+Just like the analysis of females and males in Part 3, you will need to calculate the rate of strokes in married and single patients. 
+
+Q3: The reporter wants to know if strokes are more likely in married patients?
+
+< create a code block to calculate the rate of strokes in married and single patients >
+
+A3: 
+
+
+Bonus: Please include any comments you feel you should mention before the reporter tries to publish the story!"
+
+# Part 5
+
+Below is an example of plots that can convey information about more than one column at a time.
+
+This is a teaser for future weeks where you will make these plots yourself to visualise datasets
 
 ```{R}
-n_patients <- 
-  
-#paste("There are", n_patients, "in the stroke dataset.")
-```
-
-## Question 2 
-How many patients have had a stroke? 
-
-Save your answer in a variable called n_stroke. Uncomment the paste command when you are done to print your answer.
-
-Hint: use the table() function on the 'stroke' column. The table() function will count how many Yes/No answers there are for you.
-
-```{R}
-n_stroke <- 
-  
-#paste(n_stroke[2], "patients have had a stroke in the dataset,", n_stroke[1], "have not had a stroke.")
-```
-
-## Task 1
-The column "id" is a unique identifier for each patient in the dataset.
-
-Make the unique "id" column our datasets row names using the rownames() function:
-
-```{R}
-rownames(__________) <- _______$________
-```
-
-
-## Task 2
-Inspect the dataframe to make sure the rownames match the "id" column.
-
-Now that our "id" column exists as row names, you can delete the colum. 
-
-Using any method (subset or numerical indexing) drop the column "id" from the dataset:
-
-```{R}
-
-```
-
-Your dataset should now have 11 columns.
-
-## Task 3
-Your boss wants to split the dataset according to gender. 
-
-Subset the dataset using the 'gender' column so that two new dataframes called male_stroke and female_stroke are created:
-
-Note: The gender vector is an atomic vector (do not worry about what this means) - all you need to know is that the example given in the website will not work - when using subset, pass the column name as the second argument. (do not pass both the dataset name and column name separated by a dollar symbol).
-
-```{R}
-male_stroke <- 
-  
-female_stroke <- 
-```
-
-
-## Question 3
-
-How many patients are in the male_stroke and female_stroke datasets? Save the answer to n_females and n_males variables and uncomment the code to print your answer when you are finished.
-
-```{R}
-n_females <- nrow(female_stroke)
-
-n_males <- nrow(male_stroke)
-
-#paste("There are", n_females,"females in the dataset and",n_males,"males in the dataset.")
-```
-
-## Question 4
-
-Finally, we want to use a metric to convey the rate of strokes in each gender. We will use something simple: stroke rate = (the number of strokes/the number of patients) for both males and females. 
-
-In the code block below, calculate the number of strokes for both males and females. We will then use n_female and n_male from the previous code block to use as the denominator in our simple metric (You can uncomment the code lines once you have n_stroke_male and n_stroke_female)
-
-```{R}
-n_stroke_female <-
-  
-n_stroke_male <-
-  
-#stroke_rate_females <- (n_stroke_female/n_females)
-  
-#stroke_rate_males <- (n_stroke_male/n_males)
-  
-#paste("The rate of strokes in females is", stroke_rate_females, "and", stroke_rate_males, "in males.")
+library(ggpubr)
+gghistogram(dataset, x="age", y="..count..", facet.by = "gender", color = "stroke", add = "mean", fill = "stroke", palette = "lancet")
+ggboxplot(dataset, x="stroke", y="age", facet.by = "gender", fill = "stroke", palette = "lancet", bxp.errorbar = T)
+ggscatter(dataset, x="age", y="bmi", facet.by = "gender", color = "stroke", palette = "lancet", add = "reg.line", conf.int = T, fullrange = T, shape = "stroke", alpha = "stroke")
 ```

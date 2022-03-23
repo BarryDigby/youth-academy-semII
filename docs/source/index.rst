@@ -40,3 +40,4 @@ Week 1
    :caption: Week 2
 
    /week2/file_1
+   /week2/file_2
