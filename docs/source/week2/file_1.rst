@@ -1,8 +1,10 @@
-Intro to coding
+R Studio Basics
 ###############
 
-Code blocks
-===========
+Below are examples of how to begin a new code block, inspect environment variables and load libraries. You will be using these every week - bookmark this section. 
+
+Creating Code Blocks
+====================
 
 In RStudio you can create a code block in the ``Code editor`` by clicking on the ``+`` button:
 
@@ -13,7 +15,38 @@ In RStudio you can create a code block in the ``Code editor`` by clicking on the
 
 |
 
-Insert code you want to execute in these blocks - any text outside of a code block is treated as regular text and is not evaluated. 
+Insert code you want to execute in these blocks - any text outside of a code block is treated as regular text and is not evaluated.
+
+Inspecting Variables
+====================
+
+Rstudio has the benefit of being able to visually inspect variables in the workspace. To do this, click on an object in the ``environment`` window pane:
+
+.. figure:: /_static/images/environment.gif
+   :figwidth: 700px
+   :target: /_static/images/environment.gif
+   :align: center
+
+|
+
+Loading Libraries
+=================
+
+Each week we will be using libraries to perform an analysis or data visualisation. It is common practice to load libraries at the top of your Markdown document for your analysis:
+
+.. figure:: /_static/images/load_library.gif
+   :figwidth: 700px
+   :target: /_static/images/load_library.gif
+   :align: center
+
+|
+
+.. note::
+
+    When compiling your document, you **must** load libraries before any line of code that calls a function from that library. This is why we use ``library()`` at the very top of documents.
+
+Basic Data Structures
+#####################
 
 Variables
 ===========
