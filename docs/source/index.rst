@@ -34,3 +34,9 @@ Week 1
    /week1/file_2
    /week1/file_3
 
+.. toctree::
+   :maxdepth: 3
+   :hidden:
+   :caption: Week 2
+
+   /week2/file_1
