@@ -45,6 +45,10 @@ Each week we will be using libraries to perform an analysis or data visualisatio
 
 |
 
+.. note::
+
+    When compiling your document, you **must** load libraries before any line of code that calls a function from that library. This is why we use ``library()`` at the very top of documents.
+
 Viewing Documentation
 =====================
 
@@ -58,10 +62,6 @@ In R, to view the documentation for a function, place the cursor on the function
    :align: center
 
 |
-
-.. note::
-
-    When compiling your document, you **must** load libraries before any line of code that calls a function from that library. This is why we use ``library()`` at the very top of documents.
 
 Basic Data Structures
 #####################
