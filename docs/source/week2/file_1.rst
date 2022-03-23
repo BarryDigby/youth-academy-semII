@@ -3,6 +3,10 @@ R Studio Basics
 
 Below are examples of how to begin a new code block, inspect environment variables and load libraries. You will be using these every week - bookmark this section. 
 
+.. note::
+
+    Right click on a GIF and 'open image in new tab' to view full size. 
+
 Creating Code Blocks
 ====================
 
@@ -41,6 +45,20 @@ Each week we will be using libraries to perform an analysis or data visualisatio
 
 |
 
+Viewing Documentation
+=====================
+
+This is in my opinion, the most important aspect of this section. **You must become self sufficient at reading documentation**.
+
+In R, to view the documentation for a function, place the cursor on the function name and hit the ``F1`` key:
+
+.. figure:: /_static/images/help.gif
+   :figwidth: 700px
+   :target: /_static/images/help.gif
+   :align: center
+
+|
+
 .. note::
 
     When compiling your document, you **must** load libraries before any line of code that calls a function from that library. This is why we use ``library()`` at the very top of documents.
@@ -49,7 +67,7 @@ Basic Data Structures
 #####################
 
 Variables
-===========
+=========
 
 The first concept we will cover are **variables**. Variables are placeholders for a quantity that may change, or any mathematical object. In particular, a variable may represent a number, a vector, a matrix, a function, the list goes on.
 
@@ -210,6 +228,9 @@ Drop Lewis Hamilton from our ``drivers`` vector. Don't forget to assign the oper
     Verstappen      Perez     Norris   Riccardo    Leclerc       Zhou 
         33           11         4         3           16          24 
 
+Higher Level Data Structures
+############################
+
 Lists
 =====
 
@@ -293,6 +314,9 @@ Inspect the column names and row names of a dataframe:
     [134] "134" "135" "136" "137" "138" "139" "140" "141" "142" "143" "144" "145" "146" "147" "148" "149" "150"
 
 Note that the rownames in this dataset are not important, they are just automatically incremented integers.
+
+Manipulating Dataframes
+#######################
 
 Dataframe Indexes
 -----------------
@@ -402,9 +426,3 @@ To add a second layer of conditionals we will re-use the ``ifelse()`` function:
 .. code-block:: console
 
     [1] "less than 5"    "less than 5"    "less than 5"    "less than 5"    "five"           "greater than 5" "greater than 5" "greater than 5" "greater than 5" "greater than 5"
-
-
-Worksheet
-=========
-
-Copy and paste the contents of the following `R Markdown document <https://github.com/BarryDigby/TY_workshop/blob/master/docs/source/worksheets/dataframe_subsetting.Rmd>`_ into your RStudio Cloud workspace and work through the questions.
