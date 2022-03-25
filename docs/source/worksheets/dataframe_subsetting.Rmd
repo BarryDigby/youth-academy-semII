@@ -49,9 +49,12 @@ Q1: How many patients are in the dataset?
 
 Q2: How many males and females are in the dataset? (Hint: use table() on the gender column).
 
-Q3: What is the age of the youngest and eldest patient in the dataset? (Hint use min() and max() on the age column).
+Q3: What is the average (mean) age of patients in the dataset? (Hint use mean() on the age column).
 
-Q4: How many patients in the datset have had a stroke? (similar to Q2)
+Q4: What is the age of the youngest and eldest patient in the dataset? (Hint use min() and max() on the age column).
+
+Q5: How many patients in the dataset have had a stroke? (similar to Q2)
+
 
 < delete this line and create a code block to answer the questions >
 
@@ -63,6 +66,7 @@ A3:
 
 A4:
 
+A5: 
 
 # Part 2
 
@@ -72,31 +76,37 @@ Create a code block below and split the dataframe by gender, creating two new da
 
 < delete this line and create a code block splitting the dataset into males and females >
 
-Q1: Based on the two dataframes, report the number of females that have had strokes and the number of males that have had strokes. (Hint: use table() on the stroke column for each dataframe).
+Based on the two dataframes:
+
+Q1: Report the number of females that have had strokes and the number of males that have had strokes. (Hint: use table() on the stroke column for each dataframe).
+
+Q2: What is the average age for females and males in the dataset?
 
 < delete this line and create a code block to answer the question >
 
 A1: 
 
+Q2: 
+
 # Part 3
 
-The answer reported in Part 2 could be misleading. If there are more males than females or vice versa, then the result given in Part 2 could be due to sampling bias.
+The answer reported in Part 2 could be misleading. If there are more males than females or vice versa, the result given in Part 2 could be due to sampling bias.
 
 To overcome sampling bias, we will generate a new statistic called 'stroke rate' for females and males in a three step process:
 
-* Calculate the number of males that have had a stroke and save it as a variable called 'n_stroke_male'
+1. Calculate the number of males that have had a stroke and save it as a variable called 'n_stroke_male'
 
-* Calculate the number of males in the dataset and save it as a variable called 'n_males'
+2. Calculate the number of males in the dataset and save it as a variable called 'n_males'
 
-* Divide n_stroke_males/n_males to compute the rate of strokes in men. Save the result to a variable. 
+3. Divide n_stroke_males/n_males to compute the rate of strokes in men. Save the result to a variable. 
 
 Repeat the above process for females and report your answer for each gender below the code block.
 
+Q1: Is the rate of strokes higher in males or females? 
+
 < delete this line to calculate the rate of strokes in males and females >
 
-A1: 
-
-Is the rate of strokes higher in males or females? 
+A1:
 
 # Part 4
 
@@ -116,7 +126,7 @@ A1:
 
 A2:
 
-Just like the analysis of females and males in Part 3, you will need to calculate the rate of strokes in married and single patients. 
+Just like the analysis of females and males in Part 3, calculate the rate of strokes in married and single patients. 
 
 Q3: The reporter wants to know if strokes are more likely in married patients?
 
@@ -137,5 +147,4 @@ This is a teaser for future weeks where you will make these plots yourself to vi
 library(ggpubr)
 gghistogram(dataset, x="age", y="..count..", facet.by = "gender", color = "stroke", add = "mean", fill = "stroke", palette = "lancet")
 ggboxplot(dataset, x="stroke", y="age", facet.by = "gender", fill = "stroke", palette = "lancet", bxp.errorbar = T)
-ggscatter(dataset, x="age", y="bmi", facet.by = "gender", color = "stroke", palette = "lancet", add = "reg.line", conf.int = T, fullrange = T, shape = "stroke", alpha = "stroke")
 ```
