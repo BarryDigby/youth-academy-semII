@@ -107,7 +107,7 @@ Translation, like transcription, has three steps: initiation, elongation, and te
 RNA-Sequencing
 --------------
 
-A popular experiment in genomics is called RNA-Sequencing where the messenger RNA in a cell is captured and quantified using hight throughput sequencing technologies and comptational algorithms. This allows researchers to quantify the expression of genes - seeing what genes are turned on or off, and how much of each gene is expressed:
+A popular experiment in genomics is called RNA-Sequencing where the messenger RNA in a cell is captured and quantified using high throughput sequencing technologies in conjunction with computational algorithms. This allows researchers to quantify the expression of genes - seeing what genes are turned on or off, and how much of each gene is expressed:
 
 .. figure:: /_static/images/tumor_norm.png
    :figwidth: 700px
