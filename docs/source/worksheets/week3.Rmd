@@ -1,0 +1,115 @@
+---
+title: "Week 3"
+author: "Barry"
+date: "4/1/2022"
+output: html_document
+---
+
+## Week 3 Worksheet
+
+Run the code block below to load the dataset containing 5 genes.
+
+```{R, message=F, quiet=T}
+library(ggpubr)
+df <- read.table(url("https://raw.githubusercontent.com/BarryDigby/Youth-Academy/master/data/expr_t_n.txt"), header=T)
+```
+
+** You do not have to write code in this worksheet - the goal here is to interpret the plots and make comments on the dataset. **
+
+
+## Inspecting MUC1
+
+The MUC1 gene provides instructions for making a protein called mucin 1. This protein is one of several mucin proteins that make up mucus, a slippery substance that lubricates and protects the lining of the airways, digestive system, reproductive system, and other organs and tissues. In addition to its role in mucus, mucin 1 is involved in cell signaling and kidney development.
+
+Run the code block below to view the distribution of MUC1 in healthy and cancer patients:
+
+```{R}
+gghistogram(df, x="MUC1", y="..count..", fill = "sample_type", add = "mean", ggtheme = theme_bw())
+ggboxplot(df, x="sample_type", y="MUC1", fill = "sample_type", bxp.errorbar = T, ggtheme = theme_bw(), add = "jitter", add.params = list(alpha=0.1))
+```
+
+### Questions:
+
+Inspect the distribution of MUC1 expression in both the histogram and boxplot (these are depicting the same information). 
+
+1. Is there any difference between MUC1 expression in normal and tumor samples?
+
+2. Do you think this gene is useful at distinguishing healthy vs. cancer patients? 
+
+
+## Inspecting GATA3
+
+This gene encodes a protein which belongs to the GATA family of transcription factors. These transcription factors bind to sequences of DNA containing the bases 'GATA' to initiate transcription. 
+
+Run the code block below to view the distribution of GATA3 in healthy and cancer patients:
+
+```{R}
+gghistogram(df, x="GATA3", y="..count..", fill = "sample_type", add = "mean", ggtheme = theme_bw())
+ggboxplot(df, x="sample_type", y="GATA3", fill = "sample_type", bxp.errorbar = T, ggtheme = theme_bw(), add = "jitter", add.params = list(alpha=0.1))
+```
+
+### Questions:
+
+Inspect the distribution of GATA3 expression in both the histogram and boxplot (these are depicting the same information). 
+
+1. Is there any difference between GATA3 expression in normal and tumor samples?
+
+2. Do you think this gene is useful at distinguishing healthy vs. cancer patients? 
+
+
+## Inspecting PTEN
+
+PTEN is a multi-functional tumor suppressor that is very commonly lost in human cancer. Observed in prostate cancer, glioblastoma, endometrial, lung and breast cancer to varying degrees. Up to 70% of prostate cancer patients have been observed to have loss of expression of the gene.
+
+Run the code block below to view the distribution of PTEN in healthy and cancer patients:
+
+```{R}
+gghistogram(df, x="PTEN", y="..count..", fill = "sample_type", add = "mean", ggtheme = theme_bw())
+ggboxplot(df, x="sample_type", y="PTEN", fill = "sample_type", bxp.errorbar = T, ggtheme = theme_bw(), add = "jitter", add.params = list(alpha=0.1))
+```
+
+### Questions:
+
+Inspect the distribution of PTEN expression in both the histogram and boxplot (these are depicting the same information). 
+
+1. Is there any difference between PTEN expression in normal and tumor samples?
+
+2. Do you think this gene is useful at distinguishing healthy vs. cancer patients? 
+
+## Inspecting XBP1
+
+The XBP1 gene encodes a transcription factor that regulates MHC class II genes by binding to a promoter element referred to as an X box. (This means XBP1 regulates the expression of genes involved in our immune system)
+
+Run the code block below to view the distribution of XBP1 in healthy and cancer patients:
+
+```{R}
+gghistogram(df, x="XBP1", y="..count..", fill = "sample_type", add = "mean", ggtheme = theme_bw())
+ggboxplot(df, x="sample_type", y="XBP1", fill = "sample_type", bxp.errorbar = T, ggtheme = theme_bw(), add = "jitter", add.params = list(alpha=0.1))
+```
+
+### Questions:
+
+Inspect the distribution of XBP1 expression in both the histogram and boxplot (these are depicting the same information). 
+
+1. Is there any difference between XBP1 expression in normal and tumor samples?
+
+2. Do you think this gene is useful at distinguishing healthy vs. cancer patients? 
+
+## Inspecting ESR1
+
+The ESR1 gene regulates the transcription of many estrogen-inducible genes that play a role in growth, metabolism, sexual development, gestation, and other reproductive functions and is expressed in many non-reproductive tissues. 
+
+Run the code block below to view the distribution of ESR1 in healthy and cancer patients:
+
+```{R}
+gghistogram(df, x="ESR1", y="..count..", fill = "sample_type", add = "mean", ggtheme = theme_bw())
+ggboxplot(df, x="sample_type", y="ESR1", fill = "sample_type", bxp.errorbar = T, ggtheme = theme_bw(), add = "jitter", add.params = list(alpha=0.1))
+```
+
+### Questions:
+
+Inspect the distribution of ESR1 expression in both the histogram and boxplot (these are depicting the same information). 
+
+1. Is there any difference between ESR1 expression in normal and tumor samples?
+
+2. Do you think this gene is useful at distinguishing healthy vs. cancer patients? 
