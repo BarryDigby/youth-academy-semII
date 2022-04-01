@@ -38,6 +38,16 @@ Week 2
 
 5. Stroke dataset worksheet
 
+Week 3
+------
+
+1. Introduction to RNA-Seq
+
+2. High Throughput Sequencing
+
+3. Viewing BAM files in IGV
+
+4. Interpreting Histogram, Boxplot Gene Expression Data
 
 
 .. toctree::
