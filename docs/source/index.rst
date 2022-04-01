@@ -68,7 +68,7 @@ Week 3
    /week2/file_2
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
    :hidden:
    :caption: Week 3
 
