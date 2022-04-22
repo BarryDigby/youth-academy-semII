@@ -148,3 +148,16 @@ library(ggpubr)
 gghistogram(dataset, x="age", y="..count..", facet.by = "gender", color = "stroke", add = "mean", fill = "stroke", palette = "lancet")
 ggboxplot(dataset, x="stroke", y="age", facet.by = "gender", fill = "stroke", palette = "lancet", bxp.errorbar = T)
 ```
+
+
+```{R}
+library(biomaRt)
+
+hsa_mart <- useMart("ensembl", dataset = "hsapiens_gene_ensembl")
+
+listAttributes(hsa_mart)
+
+x <- getBM(attributes = c("mirbase_accession", "mirbase_id", "ensembl_gene_id"),mart = hsa_mart)
+
+x <-  x[!(is.na(x$mirbase_accession) | x$mirbase_accession==""), ]
+```

@@ -1,0 +1,211 @@
+---
+title: "week_5"
+output: html_document
+date: '2022-04-22'
+---
+
+# Install these packages
+```{R, quiet=T}
+install.packages("ggpubr")
+install.packages("caret")
+install.packages("e1071")
+install.packages("pheatmap")
+install.packages("gplots")
+install.packages("scatterplot3d")
+```
+
+# Load libraries and dataset
+```{R, quiet=T}
+library(ggpubr)
+library(caret)
+library(e1071)
+library(pheatmap)
+library(scatterplot3d)
+library(gplots)
+
+iris <- datasets::iris
+```
+
+# Inspect Dataset using 3Dscatterplot
+
+```{R}
+colors <- c("#999999", "#E69F00", "#56B4E9")
+colors <- colors[as.numeric(iris$Species)]
+scatterplot3d::scatterplot3d(iris$Sepal.Length, iris$Sepal.Width, iris$Petal.Length, box=F, color = colors, pch=16, angle = 120, xlab = "Sepal Length", ylab="Sepal Width", zlab="Petal Length")
+legend("bottom", legend = levels(iris$Species),
+      col =  c("#999999", "#E69F00", "#56B4E9"), pch = 16,  inset = -0.35, xpd = TRUE, horiz = TRUE)
+```
+
+# Add new collected sample
+```{R}
+new_sample <- data.frame(4.7, 3.5, 2.6, 1, "New Data")
+names(new_sample) <- colnames(iris)
+iris <- rbind(iris, new_sample)
+```
+
+# plot new data point in 3d scatterplot
+
+Try a range of different values for "angle = 55" to view the plot from a different angle. (try 20 or 30)
+```{R}
+colors <- c("#999999", "#E69F00", "#56B4E9", "#1ECA06")
+colors <- colors[as.numeric(iris$Species)]
+scatterplot3d(iris$Sepal.Length, iris$Sepal.Width, iris$Petal.Length, box=F, color = colors, pch=16, angle = 30, xlab = "Sepal Length", ylab="Sepal Width", zlab="Petal Length")
+legend("bottom", legend = levels(iris$Species),
+      col =  c("#999999", "#E69F00", "#56B4E9", "#1ECA06"), pch = 16,  inset = -0.35, xpd = TRUE, horiz = TRUE)
+```
+
+Which species do you think the new data entry belongs to? (Poll 1)
+
+# Using KNN in R
+
+Test different values for K, and assess the accuracy of the model. Report your selected value for K in the zoom poll.
+
+```{R}
+set.seed(123)
+model_fit <- knn3(iris[,1:4], iris[,5], k = 11)
+
+# test model on dataset it learned 
+model_predictions <- predict(model_fit, iris[,1:4], type = "class")
+cfm <- confusionMatrix(model_predictions, iris[,5])
+print(cfm)
+```
+
+# Optimise the parameter K using a grid search:
+
+```{R}
+set.seed(123)
+xaxis <- 2:40
+tracker <- c()
+for( value in 2:40 ){
+  model_fit <- caret::knn3(iris[,1:4], iris[,5], k = value)
+  model_predictions <- predict(model_fit, iris[,1:4], type = "class")
+  cfm <- caret::confusionMatrix(model_predictions, iris[,5])
+  acc <- cfm$overall[[1]]
+  tracker <- c(tracker, acc)
+}
+
+results <- data.frame(x=xaxis, y=tracker)
+
+ggpubr::ggline(results, "x", "y", xlab = "Value for K", ylab = "Accuracy", ggtheme = theme_bw(), title = "KNN Model Grid Search: obtaining optimal value for K")
+```
+
+
+***
+
+# Worksheet
+
+Please read the description of the dataset and answer the questions below. 
+
+We will start by using clustering (last weeks material) to gain insights into the dataset. You will be tasked with classifying 3 new patients and advise the treating clinician which patients are a candidate for drug treatment based on the results. 
+
+***
+
+# Load the data
+```{R}
+mat <- read.delim("https://raw.githubusercontent.com/BarryDigby/Youth-Academy/master/data/mat.txt", row.names="samples", header=T, sep=",", stringsAsFactors = TRUE)
+```
+
+The dataset consists of 18 samples: 6 Clone1 samples, 6 Clone9 samples, and 6 Control samples that were derived using prostate cancer cell lines.
+
+* Clone1 cells are highly resistant to enzalutamide treatment.
+* Clone9 cells are moderately resistant to enzalutamide treatment.
+* Control cells are enzalutamide sensitive.
+
+Enzalutamide is an anti-androgen therapy used in prostate cancer patients. The control samples are sensitive to enzalutamide - that means enzalutamide works on these patients. Clone1 samples are highly resistant - enzalutamide does not work on these patients and should not be given the drug. Clone9 samples show moderate response to the drug - further testing is required to determine if we should administer the drug to these patients.
+
+***
+
+# Perform clustering on the samples
+
+Firstly, we will cluster the samples to check if there are any outliers. 
+
+An outlier might occur if a sample was mis-labelled or worse, if the samples are indistinguishable from each other.
+
+```{R}
+# Calculate distance metrics. 
+dmat <- dist(mat[,1:20], method = "manhattan", diag = T)
+# This dataframe links each sample name to its flower species
+annotdf <- data.frame(row.names = rownames(as.matrix(dmat)),
+                      Group   = mat$group )
+# Must make colors so we can see which group a sample belongs to
+ann_col <- list(Group = c(Clone1 = "purple", 
+                            Clone9 = "dodgerblue",
+                            Control = "green"))
+# plot heatmap
+pheatmap::pheatmap(as.matrix(dmat), 
+         clustering_distance_rows = dmat, 
+         clustering_distance_cols = dmat, 
+         #color = greenred(200),
+         annotation_col = annotdf,
+         annotation_row = annotdf,
+         annotation_colors = ann_col,
+         show_rownames = T, show_colnames = T,
+         treeheight_row = 50, treeheight_col = 50, cutree_cols = 3, cutree_rows = 3)
+```
+
+1. Do you think the experiment worked? Did each of the 3 groups (Clone1, Clone9, Control) cluster together? 
+
+2. Which of the 3 groups is the most different (displays a large distance) when compared to the other 2 groups?
+
+## Testing our classifier on the data 
+
+We want to check which value for K gives the highest accuracy before we test the KNN algorithm on new patients. 
+
+```{R}
+model_fit <- caret::knn3(mat[,1:20], mat[,21], k = 5)
+model_predictions <- predict(model_fit, mat[,1:20], type = "class")
+cfm <- caret::confusionMatrix(model_predictions, mat[,21])
+
+print(cfm)
+```
+
+Which value for K have you decided to use? 
+
+You can test this by brute force (Grid search) running the code block below:
+
+```{R}
+set.seed(123)
+xaxis <- 2:15
+tracker <- c()
+for( value in 2:15 ){
+  model_fit <- caret::knn3(mat[,1:20], mat[,21], k = value)
+  model_predictions <- predict(model_fit, mat[,1:20], type = "class")
+  cfm <- caret::confusionMatrix(model_predictions, mat[,21])
+  acc <- cfm$overall[[1]]
+  tracker <- c(tracker, acc)
+}
+
+results <- data.frame(x=xaxis, y=tracker)
+
+ggpubr::ggline(results, "x", "y", xlab = "Value for K", ylab = "Accuracy", ggtheme = ggplot2::theme_bw(), title = "KNN Model Grid Search: obtaining optimal value for K")
+
+```
+
+
+# Classifying new patients
+
+3 new patients have presented with prostate cancer and have been admitted to your clinic. The clinician has advised sequencing their RNA to determine if they are a candidate for Enzalutamide therapy. 
+
+## Add new patients to the dataset:
+```{R}
+new_patients <- read.delim("https://raw.githubusercontent.com/BarryDigby/Youth-Academy/master/data/new_patients.txt", header = T, row.names = "samples", stringsAsFactors = T)
+
+mat <- rbind(mat, new_patients)
+```
+
+## Classify the patients:
+
+Insert your chosen value for K below: 
+
+```{R}
+model_fit <- caret::knn3(mat[,1:20], mat[,21], k = 5)
+model_predictions <- predict(model_fit, mat[,1:20], type = "class")
+cfm <- caret::confusionMatrix(model_predictions, mat[,21])
+
+print(cfm)
+```
+
+1. Which group (Clone1, Clone9, Control) do each patient belong to? 
+
+2. Based on the results of the classification, which patients would you treat with enzalutamide? Which patients would you advise against enzalutamide therapy? 
+

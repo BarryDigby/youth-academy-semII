@@ -49,6 +49,11 @@ Week 3
 
 4. Interpreting Histogram, Boxplot Gene Expression Data
 
+Week 5
+------
+
+The class file is available here: `https://raw.githubusercontent.com/BarryDigby/youth-academy-semII/master/docs/source/worksheets/week5.Rmd <https://raw.githubusercontent.com/BarryDigby/youth-academy-semII/master/docs/source/worksheets/week5.Rmd>`_
+
 
 .. toctree::
    :maxdepth: 3
