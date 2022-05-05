@@ -54,6 +54,14 @@ Week 5
 
 The class file is available here: `https://raw.githubusercontent.com/BarryDigby/youth-academy-semII/master/docs/source/worksheets/week5.Rmd <https://raw.githubusercontent.com/BarryDigby/youth-academy-semII/master/docs/source/worksheets/week5.Rmd>`_
 
+Week 6
+------
+
+The PDF document is available here: `https://drive.google.com/file/d/1HTskP3AT21svLVS77CVyOuJPK3E15tjm/view?usp=sharing <https://drive.google.com/file/d/1HTskP3AT21svLVS77CVyOuJPK3E15tjm/view?usp=sharing>`_
+
+The RMD document is available here: `https://raw.githubusercontent.com/BarryDigby/youth-academy-semII/master/docs/source/worksheets/corr.Rmd <https://raw.githubusercontent.com/BarryDigby/youth-academy-semII/master/docs/source/worksheets/corr.Rmd>`_`
+
+
 
 .. toctree::
    :maxdepth: 3

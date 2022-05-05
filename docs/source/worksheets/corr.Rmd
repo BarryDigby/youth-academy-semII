@@ -1,0 +1,55 @@
+---
+title: "Week 6"
+output: html_document
+date: '2022-05-05'
+---
+
+```{R}
+library(ggpubr)
+data <- read.delim("https://raw.githubusercontent.com/BarryDigby/youth-academy-semII/master/docs/source/worksheets/corr_dat.txt", sep="\t", header=T)
+colnames(data) <- c("CXCL12", "PTEN", "C13orf25", "hsa-miR-125", "hsa-miR-455", "hsa-miR-75-5p")
+```
+
+# Measuring Correlation
+
+To measure correlation (the strength of relationship and direction) between two continuous variables, we can use the `cor.test()` function:
+
+```{R}
+x <- c(2, 5, 4, 7, 8, 4, 7, 8, 9, 12, 20, 18, 15, 17)
+y <- c(22, 14, 16, 15, 13, 11, 10, 9, 7, 5, 6, 5, 3, 1)
+
+cor.test(x, y)
+```
+
+Note the negative value for cor: -0.8387998. This means there is a strong negative correlation.
+
+Perhaps easier, we can visualise this trend and add the statistic to the plot:
+
+```{R}
+df <- data.frame(X=x, Y=y)
+ggscatter(df, x="X", y="Y")
+ggscatter(df, x="X", y="Y", add = "reg.line")
+ggscatter(df, x="X", y="Y", add = "reg.line", cor.coef = TRUE, cor.method = "pearson")
+```
+
+# Worksheet
+
+Your task is to use `cor.test()` or the `ggscatter()` plot to find out which miRNAs have a negative correlation with the three genes. This requires 9 calculations:
+
+* hsa-miR-125 vs. CXCL12, PTEN, C12orf25
+
+* hsa-miR-455 vs. CXCL12, PTEN, C12orf25
+
+* hsa-miR-75-5p vs. CXCL12, PTEN, C12orf25
+
+The first contrast has been done for you below. You can reuse this code and note the correlation value for each contrast:
+
+```{R}
+# use cor.test()
+# place the gene first, the miRNA second
+cor.test(data$CXCL12, data$`hsa-miR-455`)
+
+# or use the plot
+# place the gene on the x axis, place the miRNA on the y axis.
+ggscatter(data, x="CXCL12", y="hsa-miR-455", add = "reg.line", cor.coef = T, cor.method = "pearson")
+```
