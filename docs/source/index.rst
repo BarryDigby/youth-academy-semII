@@ -61,7 +61,7 @@ The PDF document is available here: `https://www.overleaf.com/read/nvthzgxcfyfq 
 
 The RMD document is available here: `https://raw.githubusercontent.com/BarryDigby/youth-academy-semII/master/docs/source/worksheets/corr.Rmd <https://raw.githubusercontent.com/BarryDigby/youth-academy-semII/master/docs/source/worksheets/corr.Rmd>`_
 
-
+Course feedback: `https://forms.gle/76MH6GYeEEfuxbH9A <https://forms.gle/76MH6GYeEEfuxbH9A>`_
 
 .. toctree::
    :maxdepth: 3
